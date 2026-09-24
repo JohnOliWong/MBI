@@ -14,7 +14,6 @@ class Residual(nn.Module):
     def forward(self, x, **kwargs):
         return self.fn(x, **kwargs) + x
 
-
 class PreNorm(nn.Module):
     def __init__(self, dim, fn):
         super().__init__()
@@ -23,7 +22,6 @@ class PreNorm(nn.Module):
 
     def forward(self, x, **kwargs):
         return self.fn(self.norm(x), **kwargs)
-
 
 class FeedForward(nn.Module):
     def __init__(self, dim, hidden_dim, dropout=0.):
@@ -37,7 +35,6 @@ class FeedForward(nn.Module):
 
     def forward(self, x):
         return self.net(x)
-
 
 class Attention(nn.Module):
     def __init__(self, dim, heads=8, dim_head=64, dropout=0.):
@@ -77,7 +74,6 @@ class Attention(nn.Module):
         out = self.to_out(out)
         return out
 
-
 class Transformer(nn.Module):
     def __init__(self, dim, depth, heads, dim_head, mlp_dim, dropout=0.):
         super().__init__()
@@ -92,7 +88,6 @@ class Transformer(nn.Module):
             x = attn(x, mask=mask)
             x = ff(x)
         return x
-
 
 class PreBlock(torch.nn.Module):
     """
@@ -132,7 +127,6 @@ class PreBlock(torch.nn.Module):
         x = torch.cat((x0, x1), 1)
 
         return x
-
 
 class fNIRS_T(nn.Module):
     """
@@ -211,7 +205,6 @@ class fNIRS_T(nn.Module):
         x3 = torch.cat((x, x2), 1)
 
         return self.mlp_head(x3)
-
 
 class fNIRS_PreT(nn.Module):
     # integrates preprocessing block (with 1D average pooling and layer normalization) with transformer

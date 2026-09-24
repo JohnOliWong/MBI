@@ -3,6 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+# 26.09.23改进：
+# 1. fc1计算输入维度，从T // 32改为T // 4 // 8
+# 2. 删除末尾多余的softmax
+
 class EEGNet(nn.Module):
     def __init__(self, C, T, num_classes, f1, depth, f2):
         super(EEGNet, self).__init__()
@@ -38,8 +42,8 @@ class EEGNet(nn.Module):
         self.dropout3 = nn.Dropout(0.25)
 
         # Classfication Head
-        self.fc1 = nn.Linear(self.f2 * (self.T // 32), self.num_classes)
-        self.softmax = nn.Softmax(dim=1)
+        # feature map time length after two pooling stages: T // 4 then // 8
+        self.fc1 = nn.Linear(self.f2 * (self.T // 4 // 8), self.num_classes)
 
         self._initialize_weights()
 
@@ -75,5 +79,4 @@ class EEGNet(nn.Module):
 
         x = x.view(x.size(0), -1)
         x = self.fc1(x)
-        x = self.softmax(x)
         return x

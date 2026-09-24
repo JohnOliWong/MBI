@@ -5,6 +5,8 @@ import ssl
 from email.mime.text import MIMEText
 from email.header import Header
 import os
+import datetime
+import logging
 
 
 def send_yagmail(exp_name):
@@ -66,3 +68,29 @@ def send_mail():
 			print("Connection Refused")
 		elif "SSL" in str(e) or "TLS" in str(e):
 			print("SSL/TLS Error")
+
+def setup_logger(log_root, timestamp=None, log_filename=None, logger_name="MMTrainer"):
+    os.makedirs(log_root, exist_ok=True)
+    timestamp = timestamp or datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = log_filename or f"train_{timestamp}.log"
+    log_file = os.path.join(log_root, log_filename)
+
+    logger = logging.getLogger(logger_name)
+    logger.setLevel(logging.INFO)
+
+    if logger.handlers:
+        return logger
+
+    fh = logging.FileHandler(log_file)
+    fh.setLevel(logging.INFO)
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.INFO)
+
+    fmt = logging.Formatter("[%(asctime)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    fh.setFormatter(fmt)
+    ch.setFormatter(fmt)
+
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+    logger.info(f"Logging to {log_file}")
+    return logger

@@ -7,6 +7,12 @@ from einops import rearrange
 from einops.layers.torch import Rearrange, Reduce
 
 
+# 26.09.24改进：
+# 原先分类头每次前向传播都会新建投影层，现改为使用emb_size
+# self.fc = nn.ModuleDict({'fc1': None, 'fc2': ..., 'fc3': ...})
+# def forward(self, x):
+#     self.fc['fc1'] = nn.Linear(dimension, 128).to(x.device)  # 每次前向重建
+
 # Convolution module
 # local features are captured with convolution instead of positional embedding
 class PatchEmbedding(nn.Module):
@@ -33,7 +39,6 @@ class PatchEmbedding(nn.Module):
         x = self.shallownet(x)
         x = self.projection(x)
         return x
-
 
 class MultiHeadAttention(nn.Module):
     def __init__(self, emb_size, num_heads, dropout):
@@ -63,7 +68,6 @@ class MultiHeadAttention(nn.Module):
         out = self.projection(out)
         return out
 
-
 # Reisdual Connection
 class ResidualAdd(nn.Module):
     def __init__(self, fn):
@@ -76,7 +80,6 @@ class ResidualAdd(nn.Module):
         x += res
         return x
 
-
 class FeedForwardBlock(nn.Sequential):
     def __init__(self, emb_size, expansion, drop_p):
         super().__init__(
@@ -86,11 +89,9 @@ class FeedForwardBlock(nn.Sequential):
             nn.Linear(expansion * emb_size, emb_size),
         )
 
-
 class GELU(nn.Module):
     def forward(self, input: Tensor) -> Tensor:
         return input*0.5*(1.0+torch.erf(input/math.sqrt(2.0)))
-
 
 class TransformerEncoderBlock(nn.Sequential):
     def __init__(self,
@@ -113,44 +114,17 @@ class TransformerEncoderBlock(nn.Sequential):
             )
             ))
 
-
 class TransformerEncoder(nn.Sequential):
     def __init__(self, depth, emb_size):
         super().__init__(*[TransformerEncoderBlock(emb_size) for _ in range(depth)])
 
-
 class ClassificationHead(nn.Sequential):
     def __init__(self, emb_size, n_classes):
-        super().__init__()
-        
-        # global average pooling
-        self.clshead = nn.Sequential(
+        super().__init__(
             Reduce('b n e -> b e', reduction='mean'),
             nn.LayerNorm(emb_size),
             nn.Linear(emb_size, n_classes)
         )
-        self.fc = nn.ModuleDict({
-            'fc1': None,
-            'fc2': nn.Linear(128, 64),
-            'fc3': nn.Linear(64, n_classes),
-        })
-        self.elu = nn.ELU()
-        self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.25)
-
-    def forward(self, x):
-        x = x.contiguous().view(x.size(0), -1)
-        dimension = x.size(-1)
-        self.fc['fc1'] = nn.Linear(dimension, 128).to(x.device)
-        x = self.fc['fc1'](x)
-        x = self.elu(x)
-        x = self.dropout1(x)
-        x = self.fc['fc2'](x)
-        x = self.elu(x)
-        x = self.dropout2(x)
-        out = self.fc['fc3'](x)
-        return out
-
 
 class Conformer(nn.Sequential):
     def __init__(self, emb_size, depth, n_classes, **kwargs):

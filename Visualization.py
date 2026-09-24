@@ -8,7 +8,7 @@ class Visualization():
 	def __init__(self, subject, mode, results_root):
 		self.subject = str(subject)
 		self.mode = mode
-		self.title = ('MI' if mode == 0 else 'MA' if mode == 1 else 'WG')
+		self.title = ('MI' if mode == 'EFMI' else 'MA' if mode == 'EFMA' else 'WG')
 		self.results_root = results_root
 		self.curve_path = results_root + f'Curve_{self.subject}_{self.title}.png'
 		self.cm_path = results_root + f'CM_{self.subject}_{self.title}.png'
@@ -56,11 +56,11 @@ class Visualization():
 		cm = confusion_matrix(all_labels, all_preds)
 		cm = cm / cm.sum(axis=1, keepdims=True)
 		labels = ['Task 1', 'Task 2']
-		if self.mode == 0:
+		if self.mode == 'EFMI':
 			labels = ['Left', 'Right']
-		elif self.mode == 1:
+		elif self.mode == 'EFMA':
 			labels = ['MA', 'BL']
-		elif self.mode == 2:
+		elif self.mode == 'EFWG':
 			labels = ['WG', 'BL']
 		disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
 		disp.plot(cmap=plt.cm.Blues)
@@ -72,11 +72,11 @@ class Visualization():
 		cm = confusion_matrix(all_labels, all_preds)
 		cm = cm / cm.sum(axis=1, keepdims=True)
 		labels = ['Task 1', 'Task 2']
-		if self.mode == 0:
+		if self.mode == 'EFMI':
 			labels = ['Left', 'Right']
-		elif self.mode == 1:
+		elif self.mode == 'EFMA':
 			labels = ['MA', 'BL']
-		elif self.mode == 2:
+		elif self.mode == 'EFWG':
 			labels = ['WG', 'BL']
 		disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
 		disp.plot(cmap=plt.cm.Blues)

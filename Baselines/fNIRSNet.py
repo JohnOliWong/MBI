@@ -11,7 +11,6 @@ class DWSConv(torch.nn.Module):
         x = self.point_conv(x)
         return x
 
-
 class fNIRSNet(torch.nn.Module):
     """
     fNIRSNet model

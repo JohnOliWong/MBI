@@ -18,7 +18,7 @@ class MultimodalDataset(Dataset):
 		return self.eeg[index].float(), self.nirs[index].float(), self.labels[index].long()
 
 
-def read_ef_train_si(subject, mode, dim=4):
+def read_ef_train_si(subject, dataset, dim=4):
 	'''
 	Training Set:
 	eeg.shape = [1680, 1, 30, 4000]
@@ -38,9 +38,9 @@ def read_ef_train_si(subject, mode, dim=4):
 	training_labels = []
 
 	for i in range(1, num_sub+1):
-		if mode == 0:
+		if dataset == 'EFMI':
 			data_root = '/data_main/junlin/BFM/Datasets/EF-MI/' + str(i) + '.pkl'
-		elif mode == 1:
+		elif dataset == 'EFMA':
 			data_root = '/data_main/junlin/BFM/Datasets/EF-MA/' + str(i) + '.pkl'
 		with open(data_root, 'rb') as f:
 			data = pickle.load(f)
@@ -83,7 +83,7 @@ def read_ef_train_si(subject, mode, dim=4):
 	return training_set, testing_set
 
 
-def read_wg_pkl_si(subject, mode, dim=4):
+def read_wg_pkl_si(subject, dataset, dim=4):
 	'''
 	Training Set:
 	eeg [1500, 1, 30, 2000]

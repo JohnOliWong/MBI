@@ -14,8 +14,6 @@ def metrics(log_root, data):
 			else:
 				startrow = 0
 			new_row.to_excel(writer, index=False, header=False, startrow=startrow)
-	
-	print('Logging Completed')
 
 def save_param(results_root, params, seeds):
 	log_root = results_root + 'Params.json'

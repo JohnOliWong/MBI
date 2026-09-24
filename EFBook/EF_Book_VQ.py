@@ -7,6 +7,16 @@ from EFBook.Encoder_EF import Encoder_EF
 from EFBook.Encoder_Common import Encoder_Common
 
 
+# 26.09.23改进：
+# 1. 码本计算权重，ot_loss会使用ot_weight作为权重
+# 2. 计算码字距离前加入L2归一化
+# 3. 不活跃码字改为使用batch中出现的特征替换
+
+# 26.09.24改进：
+# 1. 去掉分类头输出层之后的激活函数
+# 2. 去掉分类头残留的投影层
+# 3. 将卷积层中的Sigmoid替换为ReLU
+
 class EGA(nn.Module):
 	def __init__(self, emb_size, num_heads=4, drop_out=0.3):
 		super().__init__()
@@ -28,7 +38,6 @@ class EGA(nn.Module):
 
 		return attn_output
 
-
 class Quantization(nn.Module):
 	'''
 	Args:
@@ -40,7 +49,7 @@ class Quantization(nn.Module):
 	m: summation of continuous features matched to the current codeword [D, E]
 	status: reflect if a codeword is active or not [D,]
 	'''
-	def __init__(self, dict_len, emb_size, decay=0.99, quan_weight=1.0, ot_weight=1.0, threshold=60):
+	def __init__(self, dict_len, emb_size, decay=0.99, quan_weight=1.0, ot_weight=30.0, threshold=60):
 		super().__init__()
 		self.dict_len = dict_len
 		self.emb_size = emb_size
@@ -56,8 +65,12 @@ class Quantization(nn.Module):
 		self.register_buffer('status', torch.zeros(dict_len))
 
 	def forward(self, cont_features):
-		# compute L2-distance between each feature-codeword pair
-		distances = torch.cdist(cont_features, self.codebook)
+		# normalize codebook for cosine-based nearest neighbor
+		codebook_norm = F.normalize(self.codebook, dim=-1)
+		
+		# compute cosine distance between each feature-codeword pair
+		distances = -cont_features @ codebook_norm.t()
+		
 		quan_idx = torch.argmin(distances, dim=-1) # [2 * B]
 		quan_token = self.codebook.data[quan_idx] # [2 * B, E]
 		quan_token = cont_features + (quan_token - cont_features).detach()
@@ -71,8 +84,10 @@ class Quantization(nn.Module):
 		commit_loss = F.mse_loss(cont_features, quan_token.detach())
 		quan_loss = vq_loss + commit_loss
 		ot_loss = self.ot_loss(cont_features, quan_idx)
+		codebook_loss = self.quan_weight * quan_loss + self.ot_weight * ot_loss
+
 		# print(f'Codebook Loss: {quan_loss}, OT Loss: {ot_loss}')
-		codebook_loss = self.quan_weight * quan_loss + 30 * ot_loss
+		# , 'vq_loss': vq_loss, 'commit_loss': commit_loss, 'quan_loss': quan_loss, 'ot_loss': ot_loss
 
 		if usage is not None:
 			return {'usage': usage, 'quan_token': quan_token, 'codebook_loss': codebook_loss}
@@ -99,17 +114,26 @@ class Quantization(nn.Module):
 			inactive = ~matched
 			self.status[inactive] += 1
 			if (self.status >= self.threshold).any():
-				self.codeword_replace()
+				self.codeword_replace(features)
 			return usage
 
-	def codeword_replace(self):
+	def codeword_replace(self, features):
 		inactive = (self.status >= self.threshold)
-		if inactive.any() and (self.N > 1).any():
-			active_idx = torch.where(self.N > 1)[0]
-			random_idx = random.choice(active_idx.cpu().numpy())
-
-			replace_codeword = self.codebook.data[random_idx].clone()
-			self.codebook.data[inactive] = replace_codeword
+		num_replace = int(inactive.sum())
+		if num_replace > 0:
+			num_features = features.shape[0]
+			if num_features >= num_replace:
+				# re-initialize dead codewords with real features from the current batch
+				perm = torch.randperm(num_features)
+				repl = features[perm[:num_replace]].clone()
+			else:
+				# not enough features, pad by cloning existing active codewords
+				active_idx = torch.where(self.N > 1)[0]
+				repl = features.clone()
+				while repl.shape[0] < num_replace and active_idx.numel() > 0:
+					random_idx = random.choice(active_idx.cpu().numpy())
+					repl = torch.cat([repl, self.codebook.data[random_idx].unsqueeze(0)], dim=0)
+			self.codebook.data[inactive] = repl
 			self.N[inactive] = 1
 			self.m[inactive] = self.codebook.data[inactive].clone()
 			self.status[inactive] = 0
@@ -128,7 +152,6 @@ class Quantization(nn.Module):
 		)
 		return ot_loss
 
-
 class AttentionFusion(nn.Module):
 	def __init__(self, emb_size):
 		super(AttentionFusion, self).__init__()
@@ -144,7 +167,6 @@ class AttentionFusion(nn.Module):
 		outputs = sum([i * self.alpha[:, index].unsqueeze(1) for index, i in enumerate(out)])
 		return outputs
 
-
 class Classifier(nn.Module):
 	def __init__(self, emb_size, num_class):
 		super().__init__()
@@ -158,7 +180,6 @@ class Classifier(nn.Module):
 			nn.Linear(emb_size, emb_size // 2),
 			nn.ReLU(),
 			nn.Linear(emb_size // 2, num_class),
-			nn.ReLU(),
 		)
 	
 	def forward(self, eeg_token, nirs_token, quan_eeg, quan_nirs):
@@ -174,7 +195,6 @@ class Classifier(nn.Module):
 		
 		return outputs
 
-
 class Cosine_Loss(nn.Module):
 	def __init__(self):
 		super(Cosine_Loss, self).__init__()
@@ -187,15 +207,14 @@ class Cosine_Loss(nn.Module):
 		constraint = torch.relu(torch.abs(cosine_sim) - threshold)
 		return torch.mean(constraint ** 2)
 
-
 class EF_Book(nn.Module):
 	def __init__(self, dict_len, emb_size, threshold, num_class, mode, device):
 		super().__init__()
 		self.emb_size = emb_size
-		if mode == 0 or mode == 1:
+		if mode in ('EFMI', 'EFMA'):
 			self.EEG_Width = 4000
 			self.NIRS_Width = 200
-		elif mode == 2:
+		elif mode == 'EFWG':
 			self.EEG_Width = 2000
 			self.NIRS_Width = 100
 		self.num_TConv = 4

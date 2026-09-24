@@ -18,7 +18,6 @@ class DWSConv(nn.Module):
         x = self.point_conv(x)
         return x
 
-
 # EEG Temporal Convolution
 class EEGTemporalConvLayer(nn.Module):
     def __init__(self, emb_size, dropout, bias=False):
@@ -64,7 +63,6 @@ class EEGTemporalConvLayer(nn.Module):
         eeg = self.eeg_block3(eeg)
         return eeg
 
-
 class NIRSTemporalConvLayer(nn.Module):
     def __init__(self, emb_size, dropout, bias=False):
         super().__init__()
@@ -109,7 +107,6 @@ class NIRSTemporalConvLayer(nn.Module):
         nirs = self.nirs_block3(nirs)
         return nirs
 
-
 class TemporalConvLayer(nn.Module):
     def __init__(self, emb_size, dropout):
         super().__init__()
@@ -122,7 +119,6 @@ class TemporalConvLayer(nn.Module):
 
         return temporal_eeg_features, temporal_nirs_features
 
-
 class Positional_Embedding(nn.Module):
     def __init__(self, channels, emb_size, device):
         super().__init__()
@@ -134,7 +130,6 @@ class Positional_Embedding(nn.Module):
         x = self.pos_emb + x
         return x
 
-
 class CLS_Token(nn.Module):
     def __init__(self, emb_size):
         super().__init__()
@@ -144,7 +139,6 @@ class CLS_Token(nn.Module):
         self.cls_token = self.cls_token.to(x.device)
         x = torch.cat([self.cls_token.repeat(x.shape[0], 1, 1), x], dim=1)
         return x
-
 
 class Attention(nn.Module):
     def __init__(self, query_size, key_size, value_size, emb_size, num_heads, dropout, bias=False):
@@ -177,7 +171,6 @@ class Attention(nn.Module):
         out = self.projection(out)
         return out
 
-
 class FFN(nn.Module):
     def __init__(self, emb_size, expansion=2, dropout=0.5):
         super().__init__()
@@ -193,7 +186,6 @@ class FFN(nn.Module):
         x = self.feed_forward(x)
 
         return x
-
 
 class Self_Encoder(nn.Module):
     def __init__(self, query_size, key_size, value_size, emb_size, num_heads=4, forward_expansion=2, dropout=0.5):
@@ -219,7 +211,6 @@ class Self_Encoder(nn.Module):
 
         return y2
 
-
 class Transformer_Encoder(nn.Module):
     def __init__(self, depth, query_size, key_size, value_size, emb_size, num_heads, channels, expansion, dropout,
                  device):
@@ -241,7 +232,6 @@ class Transformer_Encoder(nn.Module):
             self.attention_weights[i] = blk.attention.attention_weights
         return x
 
-
 class Transformer(nn.Module):
     # calling various transformer functions
     def __init__(self, depth, query_size, key_size, value_size, emb_size, num_heads, channels, expansion, device,
@@ -258,7 +248,6 @@ class Transformer(nn.Module):
         nirs_temporal_outputs = self.nirs_temporal_encoder(temporal_nirs)
         return eeg_temporal_outputs[:, 0], nirs_temporal_outputs[:, 0]
 
-
 class Encoder_EF(nn.Module):
     def __init__(self, depth, query_size, key_size, value_size, emb_size, num_heads, expansion, conv_dropout,
                  self_dropout, cross_dropout, cls_dropout, num_classes, mode, device):
@@ -266,9 +255,9 @@ class Encoder_EF(nn.Module):
         self.temporal_conv_layer = TemporalConvLayer(emb_size, conv_dropout)
  
         with torch.no_grad():
-            if mode == 0 or mode == 1:
+            if mode in ('EFMI', 'EFMA'):
                 eeg, nirs = torch.randn(1, 30, 4000), torch.randn(1, 72, 200)
-            elif mode == 2:
+            elif mode == 'EFWG':
                 eeg, nirs = torch.randn(1, 30, 2000), torch.randn(1, 72, 100)
 
             # time / 20, time / 4

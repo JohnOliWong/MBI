@@ -25,8 +25,7 @@ class Encoder_Common(nn.Module):
 		self.conv2 = DWSConv(in_channels=num_TConv, out_channels=num_SConv, kernel_size=(S_Height, 1))
 		self.bn2 = torch.nn.BatchNorm2d(num_SConv)
 
-		self.fc = torch.nn.Linear(num_SConv, num_class)
-		self.act = torch.nn.Sigmoid()
+		self.act = torch.nn.ReLU()
 		self.project = torch.nn.Linear(num_SConv, emb_size)
 
 	def forward(self, x):

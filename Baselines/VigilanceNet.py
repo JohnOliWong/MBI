@@ -3,8 +3,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.checkpoint import checkpoint
-from timm.models.layers import trunc_normal_
+from timm.layers import trunc_normal_
 
+
+# 26.09.24改进：
+# 修改了从timm导入的写法
+# 将输出层的回归头改为输出logits（Regression类名保留）
 
 # weights init
 def _init_weights(m):
@@ -15,7 +19,6 @@ def _init_weights(m):
     elif isinstance(m, nn.LayerNorm):
         nn.init.constant_(m.bias, 0)
         nn.init.constant_(m.weight, 1.0)
-
 
 # scaled dot product
 class ScaledDotProductAttention(nn.Module):
@@ -43,7 +46,6 @@ class ScaledDotProductAttention(nn.Module):
         attention = self.dropout(attention)
         context = torch.bmm(attention, v)
         return context, attention
-
 
 # multi-head attention
 class MultiHeadAttention(nn.Module):
@@ -101,7 +103,6 @@ class MultiHeadAttention(nn.Module):
 
         return output, attention
 
-
 # FFN
 class PositionalWiseFeedForward(nn.Module):
     def __init__(self, model_dim, ffn_dim, dropout=0.0):
@@ -118,7 +119,6 @@ class PositionalWiseFeedForward(nn.Module):
         output = self.layer_norm(x + output)
         return output
 
-
 class EncoderLayer(nn.Module):
     def __init__(self, model_dim, num_heads, ffn_dim, attn_drop=0.0, proj_drop=0.0, feed_drop=0.0):
         super(EncoderLayer, self).__init__()
@@ -134,7 +134,6 @@ class EncoderLayer(nn.Module):
 
         return output, attention
 
-
 class EmbeddingModule(nn.Module):
     """ Embedding module of EEG/fNIRS features """
     def __init__(self, in_chans, out_chans=64, patch_embed_bias=True):
@@ -148,9 +147,8 @@ class EmbeddingModule(nn.Module):
         out = out.transpose(2, 1)
         return out
 
-
 class Regression(nn.Module):
-    """ Regression layer """
+    """ Classification head (原 Regression 层，已改为二分类 logits) """
     def __init__(self, hidden_size, num_classes):
         super(Regression, self).__init__()
         self.norm = nn.LayerNorm(hidden_size)
@@ -162,17 +160,16 @@ class Regression(nn.Module):
         out = self.norm(x)
         out = self.avgpool(out.transpose(1, 2))
         out = torch.flatten(out, 1)
-        out = (torch.tanh(self.predict(out)) + 1) / 2
+        out = self.predict(out)
         return out
-
 
 class VigilanceNet(nn.Module):
     def __init__(self, hidden_size, num_heads, ffn_dim, attn_drop, proj_drop, feed_drop, num_classes, mode):
         super(VigilanceNet, self).__init__()
         eeg_chan, nirs_chan = 30, 72
-        if mode == 0 or mode == 1:
+        if mode in ('EFMI', 'EFMA'):
             eeg_time, nirs_time = 4000, 200
-        elif mode == 2:
+        elif mode == 'EFWG':
             eeg_time, nirs_time = 2000, 100
         
         self.feature_embed1 = EmbeddingModule(in_chans=eeg_chan, out_chans=hidden_size)

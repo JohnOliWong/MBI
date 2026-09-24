@@ -10,6 +10,9 @@ from scipy.signal import butter, lfilter
 from Baselines.DualConvLayer import SpatialConvLayer, TemporalConvLayer
 
 
+# 26.09.24改进：
+# 使cls_token始终保持nn.Parameter，原来的写法会在第一次前向传播后被赋值为一般的张量
+
 class PositionalEmbedding(nn.Module):
     def __init__(self, channels, emb_size, device):
         super().__init__()
@@ -20,7 +23,6 @@ class PositionalEmbedding(nn.Module):
     def forward(self, x):
         x = self.pos_emb + x
         return x
-
 
 class ModalityTypeEmbedding(nn.Module):
     def __init__(self, emb_size, token_type_idx=1):
@@ -38,17 +40,15 @@ class ModalityTypeEmbedding(nn.Module):
         x = x + type_emb
         return x
 
-
 class AddClsToken(nn.Module):
     def __init__(self, emb_size):
         super().__init__()
         self.cls_token = nn.Parameter(torch.randn(1, 1, emb_size), requires_grad=True)
 
     def forward(self, x):
-        self.cls_token = self.cls_token.to(x.device)
-        x = torch.cat([self.cls_token.repeat(x.shape[0], 1, 1), x], dim=1)
+        cls_token = self.cls_token.to(x.device)
+        x = torch.cat([cls_token.repeat(x.shape[0], 1, 1), x], dim=1)
         return x
-
 
 class MultiHeadAttention(nn.Module):
     def __init__(self, query_size, key_size, value_size, emb_size, num_heads, dropout, bias=False):
@@ -82,7 +82,6 @@ class MultiHeadAttention(nn.Module):
         out = rearrange(out, "b h n d -> b n (h d)")
         out = self.projection(out)
         return out
-
 
 class MultiHeadSelfAttention(nn.Module):
     def __init__(self, query_size, key_size, value_size, emb_size, num_heads, dropout, bias=False):
@@ -133,7 +132,6 @@ class FeedForwardBlock(nn.Module):
 
         return x
 
-
 class SelfEncoderBlock(nn.Module):
     def __init__(self, query_size, key_size, value_size, emb_size, num_heads=4, forward_expansion=2, dropout=0.5):
         super(SelfEncoderBlock, self).__init__()
@@ -157,7 +155,6 @@ class SelfEncoderBlock(nn.Module):
         y2 = y2 + res
 
         return y2
-
 
 class CrossEncoderBlock(nn.Module):
     def __init__(self, query_size, key_size, value_size, emb_size, num_heads=4, forward_expansion=2, dropout=0.5):
@@ -184,7 +181,6 @@ class CrossEncoderBlock(nn.Module):
 
         return y2
 
-
 class TransformerCrossEncoder(nn.Module):
     def __init__(self, depth, query_size, key_size, value_size, emb_size, num_heads, channels, expansion, dropout,
                  device):
@@ -207,7 +203,6 @@ class TransformerCrossEncoder(nn.Module):
     @property
     def cross_attention_weights(self):
         return self.attention_weights
-
 
 class TransformerCatEncoder(nn.Module):
     def __init__(self, depth, query_size, key_size, value_size, emb_size, num_heads, channels, expansion, dropout,
@@ -234,7 +229,6 @@ class TransformerCatEncoder(nn.Module):
     def self_attention_weights(self):
         return self.attention_weights
 
-
 class TransformerSelfEncoder(nn.Module):
     def __init__(self, depth, query_size, key_size, value_size, emb_size, num_heads, channels, expansion, dropout,
                  device):
@@ -259,7 +253,6 @@ class TransformerSelfEncoder(nn.Module):
     @property
     def self_attention_weights(self):
         return self.attention_weights
-
 
 class Transformer(nn.Module):
     # calling various transformer functions
@@ -288,8 +281,6 @@ class Transformer(nn.Module):
                                                          num_heads, None, expansion, cross_dropout, device)
 
     def forward(self, temporal_eeg, temporal_nirs, spatial_eeg, spatial_nirs):
-
-
         eeg_temporal_outputs = self.eeg_temporal_encoder(temporal_eeg)
         nirs_temporal_outputs = self.nirs_temporal_encoder(temporal_nirs)
 
@@ -313,7 +304,6 @@ class Transformer(nn.Module):
     def get_cross_attention_weights(self):
         return [self.eeg_nirs_temporal_spatial_attention_weights, self.eeg_temporal_spatial_attention_weights]
 
-
 class AttentionFusion(nn.Module):
     def __init__(self, emb_size):
         super(AttentionFusion, self).__init__()
@@ -325,7 +315,6 @@ class AttentionFusion(nn.Module):
         alpha = self.softmax(o)
         outputs = sum([i * alpha[:, index].unsqueeze(1) for index, i in enumerate(out)])
         return outputs
-
 
 class ClassificationHead(nn.Module):
     def __init__(self, num_classes, emb_size, dropout):
@@ -365,9 +354,9 @@ class HybridTransformer(nn.Module):
  
         with torch.no_grad():
             # eeg and nirs signals are randomly generated to obtain the channels
-            if mode == 0 or mode == 1:
+            if mode in ('EFMI', 'EFMA'):
                 eeg, nirs = torch.randn(1, 30, 4000), torch.randn(1, 72, 200)
-            elif mode == 2:
+            elif mode == 'EFWG':
                 eeg, nirs = torch.randn(1, 30, 2000), torch.randn(1, 72, 100)
             eeg_token, nirs_token = self.temporal_conv_layer(eeg, nirs)
             channels = [eeg_token.shape[-1], nirs_token.shape[-1]]
