@@ -1,0 +1,38 @@
+[2026-10-01 13:23:50] Logging to Logs/EFBook_SEEDV_train_20261001_132350.log
+[2026-10-01 13:23:50] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-01 13:23:50] Val subjects:   [11, 12, 13]
+[2026-10-01 13:23:50] Test subjects:  [14, 15, 16]
+[2026-10-01 13:24:40] Epoch 1/100 | LR 5e-05
+[2026-10-01 13:24:40] Train Loss: 7.71 | Train Acc: 21.44 | Val Loss: 2.48 | Val Acc: 20.02
+[2026-10-01 13:25:17] Epoch 2/100 | LR 5e-05
+[2026-10-01 13:25:17] Train Loss: 5.69 | Train Acc: 22.62 | Val Loss: 2.38 | Val Acc: 26.66
+[2026-10-01 13:25:57] Epoch 3/100 | LR 5e-05
+[2026-10-01 13:25:57] Train Loss: 5.41 | Train Acc: 23.49 | Val Loss: 2.45 | Val Acc: 26.66
+[2026-10-01 13:26:33] Epoch 4/100 | LR 5e-05
+[2026-10-01 13:26:33] Train Loss: 5.33 | Train Acc: 24.74 | Val Loss: 2.48 | Val Acc: 27.74
+[2026-10-01 13:27:11] Epoch 5/100 | LR 5e-05
+[2026-10-01 13:27:11] Train Loss: 5.27 | Train Acc: 25.26 | Val Loss: 2.56 | Val Acc: 27.41
+[2026-10-01 13:27:47] Epoch 6/100 | LR 0.0005
+[2026-10-01 13:27:47] Train Loss: 5.42 | Train Acc: 28.62 | Val Loss: 3.35 | Val Acc: 22.78
+[2026-10-01 13:28:25] Epoch 7/100 | LR 0.0005
+[2026-10-01 13:28:25] Train Loss: 5.40 | Train Acc: 32.24 | Val Loss: 3.67 | Val Acc: 25.60
+[2026-10-01 13:29:03] Epoch 8/100 | LR 0.0004
+[2026-10-01 13:29:03] Train Loss: 5.36 | Train Acc: 33.81 | Val Loss: 4.70 | Val Acc: 25.34
+[2026-10-01 13:29:42] Epoch 9/100 | LR 0.0004
+[2026-10-01 13:29:42] Train Loss: 5.54 | Train Acc: 38.49 | Val Loss: 3.64 | Val Acc: 30.85
+[2026-10-01 13:30:23] Epoch 10/100 | LR 0.0004
+[2026-10-01 13:30:23] Train Loss: 5.62 | Train Acc: 43.90 | Val Loss: 4.72 | Val Acc: 36.33
+[2026-10-01 13:30:59] Epoch 11/100 | LR 0.0004
+[2026-10-01 13:30:59] Train Loss: 5.74 | Train Acc: 52.20 | Val Loss: 5.57 | Val Acc: 35.71
+[2026-10-01 13:31:35] Epoch 12/100 | LR 0.0004
+[2026-10-01 13:31:35] Train Loss: 5.78 | Train Acc: 58.35 | Val Loss: 5.91 | Val Acc: 34.50
+[2026-10-01 13:32:13] Epoch 13/100 | LR 0.0004
+[2026-10-01 13:32:13] Train Loss: 5.71 | Train Acc: 62.30 | Val Loss: 4.06 | Val Acc: 39.33
+[2026-10-01 13:32:50] Epoch 14/100 | LR 0.00032
+[2026-10-01 13:32:50] Train Loss: 5.56 | Train Acc: 65.66 | Val Loss: 4.42 | Val Acc: 41.54
+[2026-10-01 13:33:27] Epoch 15/100 | LR 0.00032
+[2026-10-01 13:33:27] Train Loss: 5.57 | Train Acc: 67.47 | Val Loss: 4.07 | Val Acc: 53.17
+[2026-10-01 13:34:03] Epoch 16/100 | LR 0.00032
+[2026-10-01 13:34:03] Train Loss: 5.53 | Train Acc: 70.29 | Val Loss: 4.35 | Val Acc: 47.41
+[2026-10-01 13:34:38] Early stopping at epoch 17: val loss not improved for 15 epochs
+[2026-10-01 13:34:41] === TEST === Acc: 41.93 | Precision: 43.28 | B-ACC: 40.83 | W-F1: 42.76 | Kappa: 0.2708 | AUC: 0.7016

@@ -1,0 +1,61 @@
+[2026-10-08 13:26:59] Logging to Logs/TSMMF_SEEDV_train_20261008_132659.log
+[2026-10-08 13:26:59] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-08 13:26:59] Val subjects:   [11, 12, 13]
+[2026-10-08 13:26:59] Test subjects:  [14, 15, 16]
+[2026-10-08 13:27:12] ==================== TSMMF Model Structure ====================
+[2026-10-08 13:27:12] Layer Count: AddClsToken=2, AttentionFusion=1, AvgPool2d=6, BatchNorm2d=6, ClassificationHead=1, Conv2d=10, CrossEncoderBlock=8, Dropout=74, EEGTemporalConvLayer=1, Embedding=1, EyeTemporalConvLayer=1, FeedForwardBlock=17, GELU=17, HybridTransformer=1, LayerNorm=42, Linear=105, ModalityTypeEmbedding=1, MultiHeadAttention=8, MultiHeadSelfAttention=9, PositionalEmbedding=2, ReLU=6, SWConv2d=4, SelfEncoderBlock=9, Sequential=48, Softmax=1, TemporalConvLayer=1, Transformer=1, TransformerCatEncoder=1, TransformerCrossEncoder=2, TransformerSelfEncoder=2
+[2026-10-08 13:27:12] ---- Convolution Layers (10) ----
+[2026-10-08 13:27:12]    1. temporal_conv_layer.eeg_temporal_projection.eeg_block1.0 Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-08 13:27:12]    2. temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-08 13:27:12]    3. temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 13:27:12]    4. temporal_conv_layer.eeg_temporal_projection.eeg_block3.0.depth_conv Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=64
+[2026-10-08 13:27:12]    5. temporal_conv_layer.eeg_temporal_projection.eeg_block3.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 13:27:12]    6. temporal_conv_layer.eye_temporal_projection.eye_block1.0 Conv2d  in=1    out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-08 13:27:12]    7. temporal_conv_layer.eye_temporal_projection.eye_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(33, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-08 13:27:12]    8. temporal_conv_layer.eye_temporal_projection.eye_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 13:27:12]    9. temporal_conv_layer.eye_temporal_projection.eye_block3.0.depth_conv Conv2d  in=64   out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=64
+[2026-10-08 13:27:12]   10. temporal_conv_layer.eye_temporal_projection.eye_block3.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 13:27:12] Total Parameters: 595,282 (trainable: 595,282)
+[2026-10-08 13:27:12] ====================================================
+[2026-10-08 13:28:06] Epoch 1/100 | LR 5e-05
+[2026-10-08 13:28:06] Train Loss: 3.29 | Train Acc: 21.46 | Val Loss: 1.71 | Val Acc: 24.76
+[2026-10-08 13:29:00] Epoch 2/100 | LR 5e-05
+[2026-10-08 13:29:00] Train Loss: 2.63 | Train Acc: 23.04 | Val Loss: 2.01 | Val Acc: 30.90
+[2026-10-08 13:29:54] Epoch 3/100 | LR 5e-05
+[2026-10-08 13:29:54] Train Loss: 2.25 | Train Acc: 25.83 | Val Loss: 2.27 | Val Acc: 30.46
+[2026-10-08 13:30:50] Epoch 4/100 | LR 5e-05
+[2026-10-08 13:30:50] Train Loss: 2.00 | Train Acc: 29.38 | Val Loss: 2.06 | Val Acc: 32.11
+[2026-10-08 13:31:44] Epoch 5/100 | LR 5e-05
+[2026-10-08 13:31:44] Train Loss: 1.80 | Train Acc: 33.11 | Val Loss: 2.11 | Val Acc: 33.26
+[2026-10-08 13:32:39] Epoch 6/100 | LR 0.0005
+[2026-10-08 13:32:39] Train Loss: 1.38 | Train Acc: 48.25 | Val Loss: 1.66 | Val Acc: 46.33
+[2026-10-08 13:33:34] Epoch 7/100 | LR 0.0005
+[2026-10-08 13:33:34] Train Loss: 0.99 | Train Acc: 62.53 | Val Loss: 1.89 | Val Acc: 45.77
+[2026-10-08 13:34:28] Epoch 8/100 | LR 0.0005
+[2026-10-08 13:34:28] Train Loss: 0.82 | Train Acc: 68.87 | Val Loss: 2.19 | Val Acc: 44.65
+[2026-10-08 13:35:24] Epoch 9/100 | LR 0.0005
+[2026-10-08 13:35:24] Train Loss: 0.68 | Train Acc: 74.44 | Val Loss: 2.04 | Val Acc: 50.94
+[2026-10-08 13:36:20] Epoch 10/100 | LR 0.0005
+[2026-10-08 13:36:20] Train Loss: 0.60 | Train Acc: 77.78 | Val Loss: 2.36 | Val Acc: 46.63
+[2026-10-08 13:37:16] Epoch 11/100 | LR 0.0005
+[2026-10-08 13:37:16] Train Loss: 0.53 | Train Acc: 79.98 | Val Loss: 2.06 | Val Acc: 51.36
+[2026-10-08 13:38:12] Epoch 12/100 | LR 0.0004
+[2026-10-08 13:38:12] Train Loss: 0.48 | Train Acc: 81.97 | Val Loss: 2.27 | Val Acc: 48.18
+[2026-10-08 13:39:08] Epoch 13/100 | LR 0.0004
+[2026-10-08 13:39:08] Train Loss: 0.43 | Train Acc: 84.08 | Val Loss: 2.27 | Val Acc: 50.08
+[2026-10-08 13:40:03] Epoch 14/100 | LR 0.0004
+[2026-10-08 13:40:03] Train Loss: 0.39 | Train Acc: 85.42 | Val Loss: 2.57 | Val Acc: 47.72
+[2026-10-08 13:40:59] Epoch 15/100 | LR 0.0004
+[2026-10-08 13:40:59] Train Loss: 0.36 | Train Acc: 86.85 | Val Loss: 2.47 | Val Acc: 48.33
+[2026-10-08 13:41:54] Epoch 16/100 | LR 0.0004
+[2026-10-08 13:41:54] Train Loss: 0.40 | Train Acc: 85.55 | Val Loss: 2.47 | Val Acc: 49.33
+[2026-10-08 13:42:49] Epoch 17/100 | LR 0.0004
+[2026-10-08 13:42:49] Train Loss: 0.35 | Train Acc: 87.19 | Val Loss: 2.40 | Val Acc: 50.89
+[2026-10-08 13:43:43] Epoch 18/100 | LR 0.00032
+[2026-10-08 13:43:43] Train Loss: 0.33 | Train Acc: 87.62 | Val Loss: 2.45 | Val Acc: 49.55
+[2026-10-08 13:44:34] Epoch 19/100 | LR 0.00032
+[2026-10-08 13:44:34] Train Loss: 0.29 | Train Acc: 89.69 | Val Loss: 2.52 | Val Acc: 48.35
+[2026-10-08 13:45:25] Epoch 20/100 | LR 0.00032
+[2026-10-08 13:45:25] Train Loss: 0.27 | Train Acc: 90.27 | Val Loss: 2.35 | Val Acc: 52.72
+[2026-10-08 13:46:16] Early stopping at epoch 21: val loss not improved for 15 epochs
+[2026-10-08 13:46:20] === TEST === Acc: 48.67 | Precision: 48.99 | B-ACC: 49.36 | W-F1: 48.17 | Kappa: 0.3571 | AUC: 0.7822

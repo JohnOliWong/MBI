@@ -1,0 +1,57 @@
+[2026-10-08 12:38:32] Logging to Logs/EFNet_SEEDV_train_20261008_123832.log
+[2026-10-08 12:38:32] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-08 12:38:32] Val subjects:   [11, 12, 13]
+[2026-10-08 12:38:32] Test subjects:  [14, 15, 16]
+[2026-10-08 12:38:47] ==================== EFNet Model Structure ====================
+[2026-10-08 12:38:47] Layer Count: AdaptiveAvgPool2d=1, BatchNorm2d=4, Conv2d=6, Dropout=5, EF_Net=1, Linear=6, MaxPool2d=2, ReLU=11, Sequential=12
+[2026-10-08 12:38:47] ---- Convolution Layers (6) ----
+[2026-10-08 12:38:47]    1. eeg_conv1.0                                   Conv2d  in=1    out=8    kernel=(1, 16) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:38:47]    2. eeg_conv2.0                                   Conv2d  in=8    out=8    kernel=(1, 16) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:38:47]    3. eeg_conv4.0                                   Conv2d  in=8    out=16   kernel=(8, 8) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:38:47]    4. eeg_conv5.0                                   Conv2d  in=16   out=16   kernel=(8, 8) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:38:47]    5. eye_conv1.0                                   Conv2d  in=1    out=8    kernel=(33, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:38:47]    6. eye_conv2.0                                   Conv2d  in=8    out=16   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-08 12:38:47] Total Parameters: 205,853 (trainable: 205,853)
+[2026-10-08 12:38:47] ====================================================
+[2026-10-08 12:39:03] Epoch 1/100 | LR 5e-05
+[2026-10-08 12:39:03] Train Loss: 1.60 | Train Acc: 24.78 | Val Loss: 1.59 | Val Acc: 26.11
+[2026-10-08 12:39:19] Epoch 2/100 | LR 5e-05
+[2026-10-08 12:39:19] Train Loss: 1.58 | Train Acc: 26.47 | Val Loss: 1.58 | Val Acc: 26.51
+[2026-10-08 12:39:35] Epoch 3/100 | LR 5e-05
+[2026-10-08 12:39:35] Train Loss: 1.56 | Train Acc: 29.80 | Val Loss: 1.54 | Val Acc: 26.62
+[2026-10-08 12:39:52] Epoch 4/100 | LR 5e-05
+[2026-10-08 12:39:52] Train Loss: 1.52 | Train Acc: 33.79 | Val Loss: 1.50 | Val Acc: 31.08
+[2026-10-08 12:40:11] Epoch 5/100 | LR 5e-05
+[2026-10-08 12:40:11] Train Loss: 1.46 | Train Acc: 37.80 | Val Loss: 1.46 | Val Acc: 34.45
+[2026-10-08 12:40:29] Epoch 6/100 | LR 0.0005
+[2026-10-08 12:40:29] Train Loss: 1.27 | Train Acc: 47.07 | Val Loss: 1.34 | Val Acc: 46.13
+[2026-10-08 12:40:48] Epoch 7/100 | LR 0.0005
+[2026-10-08 12:40:48] Train Loss: 1.10 | Train Acc: 56.72 | Val Loss: 1.37 | Val Acc: 46.46
+[2026-10-08 12:41:07] Epoch 8/100 | LR 0.0005
+[2026-10-08 12:41:07] Train Loss: 1.02 | Train Acc: 60.40 | Val Loss: 1.38 | Val Acc: 48.95
+[2026-10-08 12:41:26] Epoch 9/100 | LR 0.0005
+[2026-10-08 12:41:26] Train Loss: 0.96 | Train Acc: 62.78 | Val Loss: 1.44 | Val Acc: 50.08
+[2026-10-08 12:41:43] Epoch 10/100 | LR 0.0005
+[2026-10-08 12:41:43] Train Loss: 0.92 | Train Acc: 64.94 | Val Loss: 1.49 | Val Acc: 51.62
+[2026-10-08 12:42:03] Epoch 11/100 | LR 0.0005
+[2026-10-08 12:42:03] Train Loss: 0.88 | Train Acc: 66.21 | Val Loss: 1.61 | Val Acc: 50.19
+[2026-10-08 12:42:22] Epoch 12/100 | LR 0.0004
+[2026-10-08 12:42:22] Train Loss: 0.86 | Train Acc: 67.51 | Val Loss: 1.65 | Val Acc: 43.66
+[2026-10-08 12:42:40] Epoch 13/100 | LR 0.0004
+[2026-10-08 12:42:40] Train Loss: 0.81 | Train Acc: 68.94 | Val Loss: 1.51 | Val Acc: 47.36
+[2026-10-08 12:42:58] Epoch 14/100 | LR 0.0004
+[2026-10-08 12:42:58] Train Loss: 0.80 | Train Acc: 69.45 | Val Loss: 1.74 | Val Acc: 40.67
+[2026-10-08 12:43:16] Epoch 15/100 | LR 0.0004
+[2026-10-08 12:43:16] Train Loss: 0.77 | Train Acc: 70.40 | Val Loss: 1.58 | Val Acc: 48.69
+[2026-10-08 12:43:33] Epoch 16/100 | LR 0.0004
+[2026-10-08 12:43:33] Train Loss: 0.76 | Train Acc: 70.92 | Val Loss: 1.68 | Val Acc: 45.47
+[2026-10-08 12:43:53] Epoch 17/100 | LR 0.0004
+[2026-10-08 12:43:53] Train Loss: 0.73 | Train Acc: 72.48 | Val Loss: 1.67 | Val Acc: 47.98
+[2026-10-08 12:44:12] Epoch 18/100 | LR 0.00032
+[2026-10-08 12:44:12] Train Loss: 0.72 | Train Acc: 72.64 | Val Loss: 1.88 | Val Acc: 44.36
+[2026-10-08 12:44:31] Epoch 19/100 | LR 0.00032
+[2026-10-08 12:44:31] Train Loss: 0.69 | Train Acc: 74.24 | Val Loss: 2.10 | Val Acc: 40.90
+[2026-10-08 12:44:49] Epoch 20/100 | LR 0.00032
+[2026-10-08 12:44:49] Train Loss: 0.67 | Train Acc: 74.85 | Val Loss: 1.88 | Val Acc: 47.03
+[2026-10-08 12:45:07] Early stopping at epoch 21: val loss not improved for 15 epochs
+[2026-10-08 12:45:09] === TEST === Acc: 46.61 | Precision: 46.91 | B-ACC: 46.72 | W-F1: 44.94 | Kappa: 0.3308 | AUC: 0.7806

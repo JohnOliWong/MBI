@@ -1,0 +1,345 @@
+[2026-10-07 13:08:13] Logging to Logs/CAFNet_EFWG_train_20261007_130813.log
+[2026-10-07 13:08:13] === Subject 1 ===
+[2026-10-07 13:08:13] Started Oct 07 2026 13:08:13
+[2026-10-07 13:08:13] Seed is 42
+[2026-10-07 13:08:16] ==================== CAFNet Model Structure ====================
+[2026-10-07 13:08:16] Layer Count: Attention=2, CAFNet=1, ClassificationSubNetwork=1, Dropout=4, EEGSubNet=1, FeedForward=3, LSTM=1, LayerNorm=5, Linear=17, LinearLayer=2, MCLSTM=1, ModuleList=2, NIRSSubNet=1, ReLU=6, RegressionSubNetwork=1, Sequential=5
+[2026-10-07 13:08:16] ---- Convolution Layers (0) ----
+[2026-10-07 13:08:16]   (no convolution layers)
+[2026-10-07 13:08:16] Total Parameters: 359,621 (trainable: 359,621)
+[2026-10-07 13:08:16] ====================================================
+[2026-10-07 13:08:17] Subject 1 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:17] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.49 | Eval Acc: 0.50
+[2026-10-07 13:08:18] Subject 1 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:18] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 3.99 | Eval Acc: 0.50
+[2026-10-07 13:08:20] Subject 1 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:20] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.14 | Eval Acc: 0.50
+[2026-10-07 13:08:21] Subject 1 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:21] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.30 | Eval Acc: 0.50
+[2026-10-07 13:08:21] Subject 1 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:21] Ended Oct 07 2026 13:08:21 Duration 7.7238781452178955 s
+[2026-10-07 13:08:21] === Subject 2 ===
+[2026-10-07 13:08:21] Started Oct 07 2026 13:08:21
+[2026-10-07 13:08:21] Seed is 42
+[2026-10-07 13:08:24] Subject 2 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:24] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.52 | Eval Acc: 0.50
+[2026-10-07 13:08:25] Subject 2 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:25] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.04 | Eval Acc: 0.50
+[2026-10-07 13:08:27] Subject 2 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:27] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.20 | Eval Acc: 0.50
+[2026-10-07 13:08:28] Subject 2 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:28] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.38 | Eval Acc: 0.50
+[2026-10-07 13:08:28] Subject 2 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:28] Ended Oct 07 2026 13:08:28 Duration 7.008224725723267 s
+[2026-10-07 13:08:28] === Subject 3 ===
+[2026-10-07 13:08:28] Started Oct 07 2026 13:08:28
+[2026-10-07 13:08:28] Seed is 42
+[2026-10-07 13:08:31] Subject 3 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:31] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.55 | Eval Acc: 0.50
+[2026-10-07 13:08:32] Subject 3 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:32] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.04 | Eval Acc: 0.50
+[2026-10-07 13:08:33] Subject 3 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:33] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.17 | Eval Acc: 0.50
+[2026-10-07 13:08:34] Subject 3 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:34] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.37 | Eval Acc: 0.50
+[2026-10-07 13:08:34] Subject 3 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:34] Ended Oct 07 2026 13:08:34 Duration 5.700594186782837 s
+[2026-10-07 13:08:34] === Subject 4 ===
+[2026-10-07 13:08:34] Started Oct 07 2026 13:08:34
+[2026-10-07 13:08:34] Seed is 42
+[2026-10-07 13:08:37] Subject 4 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:37] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.46 | Eval Acc: 0.50
+[2026-10-07 13:08:38] Subject 4 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:38] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 3.97 | Eval Acc: 0.50
+[2026-10-07 13:08:39] Subject 4 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:39] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.15 | Eval Acc: 0.50
+[2026-10-07 13:08:41] Subject 4 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:41] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.32 | Eval Acc: 0.50
+[2026-10-07 13:08:41] Subject 4 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:41] Ended Oct 07 2026 13:08:41 Duration 6.879873752593994 s
+[2026-10-07 13:08:41] === Subject 5 ===
+[2026-10-07 13:08:41] Started Oct 07 2026 13:08:41
+[2026-10-07 13:08:41] Seed is 42
+[2026-10-07 13:08:43] Subject 5 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:43] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.42 | Eval Acc: 0.50
+[2026-10-07 13:08:45] Subject 5 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:45] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 3.97 | Eval Acc: 0.50
+[2026-10-07 13:08:46] Subject 5 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:46] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.14 | Eval Acc: 0.50
+[2026-10-07 13:08:47] Subject 5 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:47] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.34 | Eval Acc: 0.50
+[2026-10-07 13:08:47] Subject 5 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:47] Ended Oct 07 2026 13:08:47 Duration 5.894076585769653 s
+[2026-10-07 13:08:47] === Subject 6 ===
+[2026-10-07 13:08:47] Started Oct 07 2026 13:08:47
+[2026-10-07 13:08:47] Seed is 42
+[2026-10-07 13:08:50] Subject 6 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:50] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.48 | Eval Acc: 0.50
+[2026-10-07 13:08:51] Subject 6 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:51] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.01 | Eval Acc: 0.50
+[2026-10-07 13:08:52] Subject 6 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:52] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.17 | Eval Acc: 0.50
+[2026-10-07 13:08:54] Subject 6 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:54] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.36 | Eval Acc: 0.50
+[2026-10-07 13:08:54] Subject 6 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:54] Ended Oct 07 2026 13:08:54 Duration 7.020579099655151 s
+[2026-10-07 13:08:54] === Subject 7 ===
+[2026-10-07 13:08:54] Started Oct 07 2026 13:08:54
+[2026-10-07 13:08:54] Seed is 42
+[2026-10-07 13:08:56] Subject 7 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:08:56] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.47 | Eval Acc: 0.50
+[2026-10-07 13:08:57] Subject 7 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:08:57] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 3.99 | Eval Acc: 0.50
+[2026-10-07 13:08:58] Subject 7 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:08:58] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.16 | Eval Acc: 0.50
+[2026-10-07 13:08:59] Subject 7 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:08:59] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.38 | Eval Acc: 0.50
+[2026-10-07 13:08:59] Subject 7 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:08:59] Ended Oct 07 2026 13:08:59 Duration 5.593607664108276 s
+[2026-10-07 13:08:59] === Subject 8 ===
+[2026-10-07 13:08:59] Started Oct 07 2026 13:08:59
+[2026-10-07 13:08:59] Seed is 42
+[2026-10-07 13:09:02] Subject 8 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:02] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.55 | Eval Acc: 0.50
+[2026-10-07 13:09:03] Subject 8 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:03] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.05 | Eval Acc: 0.50
+[2026-10-07 13:09:04] Subject 8 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:04] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.23 | Eval Acc: 0.50
+[2026-10-07 13:09:05] Subject 8 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:05] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.43 | Eval Acc: 0.50
+[2026-10-07 13:09:05] Subject 8 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:05] Ended Oct 07 2026 13:09:05 Duration 6.173271417617798 s
+[2026-10-07 13:09:05] === Subject 9 ===
+[2026-10-07 13:09:05] Started Oct 07 2026 13:09:05
+[2026-10-07 13:09:05] Seed is 42
+[2026-10-07 13:09:08] Subject 9 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:08] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.48 | Eval Acc: 0.50
+[2026-10-07 13:09:09] Subject 9 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:09] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.03 | Eval Acc: 0.50
+[2026-10-07 13:09:10] Subject 9 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:10] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.22 | Eval Acc: 0.50
+[2026-10-07 13:09:11] Subject 9 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:11] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.43 | Eval Acc: 0.50
+[2026-10-07 13:09:11] Subject 9 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:11] Ended Oct 07 2026 13:09:11 Duration 5.907106399536133 s
+[2026-10-07 13:09:11] === Subject 10 ===
+[2026-10-07 13:09:11] Started Oct 07 2026 13:09:11
+[2026-10-07 13:09:11] Seed is 42
+[2026-10-07 13:09:14] Subject 10 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:14] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.49 | Eval Acc: 0.50
+[2026-10-07 13:09:15] Subject 10 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:15] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.05 | Eval Acc: 0.50
+[2026-10-07 13:09:17] Subject 10 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:17] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.22 | Eval Acc: 0.50
+[2026-10-07 13:09:18] Subject 10 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:18] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.42 | Eval Acc: 0.50
+[2026-10-07 13:09:18] Subject 10 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:18] Ended Oct 07 2026 13:09:18 Duration 6.746258497238159 s
+[2026-10-07 13:09:18] === Subject 11 ===
+[2026-10-07 13:09:18] Started Oct 07 2026 13:09:18
+[2026-10-07 13:09:18] Seed is 42
+[2026-10-07 13:09:21] Subject 11 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:21] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.54 | Eval Acc: 0.50
+[2026-10-07 13:09:22] Subject 11 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:22] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.07 | Eval Acc: 0.50
+[2026-10-07 13:09:24] Subject 11 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:24] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.25 | Eval Acc: 0.50
+[2026-10-07 13:09:25] Subject 11 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:25] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.47 | Eval Acc: 0.50
+[2026-10-07 13:09:25] Subject 11 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:25] Ended Oct 07 2026 13:09:25 Duration 6.884021520614624 s
+[2026-10-07 13:09:25] === Subject 12 ===
+[2026-10-07 13:09:25] Started Oct 07 2026 13:09:25
+[2026-10-07 13:09:25] Seed is 42
+[2026-10-07 13:09:28] Subject 12 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:28] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.48 | Eval Acc: 0.50
+[2026-10-07 13:09:29] Subject 12 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:29] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.02 | Eval Acc: 0.50
+[2026-10-07 13:09:30] Subject 12 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:30] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.19 | Eval Acc: 0.50
+[2026-10-07 13:09:32] Subject 12 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:32] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.41 | Eval Acc: 0.50
+[2026-10-07 13:09:32] Subject 12 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:32] Ended Oct 07 2026 13:09:32 Duration 6.5941057205200195 s
+[2026-10-07 13:09:32] === Subject 13 ===
+[2026-10-07 13:09:32] Started Oct 07 2026 13:09:32
+[2026-10-07 13:09:32] Seed is 42
+[2026-10-07 13:09:35] Subject 13 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:35] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.51 | Eval Acc: 0.50
+[2026-10-07 13:09:36] Subject 13 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:36] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.04 | Eval Acc: 0.50
+[2026-10-07 13:09:37] Subject 13 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:37] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.20 | Eval Acc: 0.50
+[2026-10-07 13:09:38] Subject 13 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:38] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.41 | Eval Acc: 0.50
+[2026-10-07 13:09:38] Subject 13 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:38] Ended Oct 07 2026 13:09:38 Duration 6.675995826721191 s
+[2026-10-07 13:09:38] === Subject 14 ===
+[2026-10-07 13:09:38] Started Oct 07 2026 13:09:38
+[2026-10-07 13:09:38] Seed is 42
+[2026-10-07 13:09:41] Subject 14 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:41] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.55 | Eval Acc: 0.50
+[2026-10-07 13:09:42] Subject 14 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:42] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.09 | Eval Acc: 0.50
+[2026-10-07 13:09:43] Subject 14 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:43] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.26 | Eval Acc: 0.50
+[2026-10-07 13:09:44] Subject 14 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:44] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.46 | Eval Acc: 0.50
+[2026-10-07 13:09:44] Subject 14 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:44] Ended Oct 07 2026 13:09:44 Duration 6.140985488891602 s
+[2026-10-07 13:09:44] === Subject 15 ===
+[2026-10-07 13:09:44] Started Oct 07 2026 13:09:44
+[2026-10-07 13:09:44] Seed is 42
+[2026-10-07 13:09:47] Subject 15 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:47] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.51 | Eval Acc: 0.50
+[2026-10-07 13:09:48] Subject 15 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:48] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.03 | Eval Acc: 0.50
+[2026-10-07 13:09:49] Subject 15 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:49] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.20 | Eval Acc: 0.50
+[2026-10-07 13:09:50] Subject 15 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:50] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.41 | Eval Acc: 0.50
+[2026-10-07 13:09:50] Subject 15 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:50] Ended Oct 07 2026 13:09:50 Duration 5.790133953094482 s
+[2026-10-07 13:09:50] === Subject 16 ===
+[2026-10-07 13:09:50] Started Oct 07 2026 13:09:50
+[2026-10-07 13:09:50] Seed is 42
+[2026-10-07 13:09:53] Subject 16 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:09:53] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.52 | Eval Acc: 0.50
+[2026-10-07 13:09:54] Subject 16 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:09:54] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.03 | Eval Acc: 0.50
+[2026-10-07 13:09:56] Subject 16 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:09:56] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.20 | Eval Acc: 0.50
+[2026-10-07 13:09:57] Subject 16 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:09:57] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.41 | Eval Acc: 0.50
+[2026-10-07 13:09:57] Subject 16 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:09:57] Ended Oct 07 2026 13:09:57 Duration 6.599469423294067 s
+[2026-10-07 13:09:57] === Subject 17 ===
+[2026-10-07 13:09:57] Started Oct 07 2026 13:09:57
+[2026-10-07 13:09:57] Seed is 42
+[2026-10-07 13:10:00] Subject 17 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:00] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.61 | Eval Acc: 0.50
+[2026-10-07 13:10:01] Subject 17 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:01] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.10 | Eval Acc: 0.50
+[2026-10-07 13:10:02] Subject 17 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:02] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.28 | Eval Acc: 0.50
+[2026-10-07 13:10:03] Subject 17 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:03] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.49 | Eval Acc: 0.50
+[2026-10-07 13:10:03] Subject 17 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:03] Ended Oct 07 2026 13:10:03 Duration 6.390681982040405 s
+[2026-10-07 13:10:03] === Subject 18 ===
+[2026-10-07 13:10:03] Started Oct 07 2026 13:10:03
+[2026-10-07 13:10:03] Seed is 42
+[2026-10-07 13:10:06] Subject 18 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:06] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.59 | Eval Acc: 0.50
+[2026-10-07 13:10:07] Subject 18 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:07] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.09 | Eval Acc: 0.50
+[2026-10-07 13:10:09] Subject 18 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:09] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.27 | Eval Acc: 0.50
+[2026-10-07 13:10:10] Subject 18 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:10] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.48 | Eval Acc: 0.50
+[2026-10-07 13:10:10] Subject 18 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:10] Ended Oct 07 2026 13:10:10 Duration 6.895914793014526 s
+[2026-10-07 13:10:10] === Subject 19 ===
+[2026-10-07 13:10:10] Started Oct 07 2026 13:10:10
+[2026-10-07 13:10:10] Seed is 42
+[2026-10-07 13:10:13] Subject 19 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:13] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.57 | Eval Acc: 0.50
+[2026-10-07 13:10:14] Subject 19 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:14] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.05 | Eval Acc: 0.50
+[2026-10-07 13:10:15] Subject 19 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:15] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.23 | Eval Acc: 0.50
+[2026-10-07 13:10:16] Subject 19 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:16] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.46 | Eval Acc: 0.50
+[2026-10-07 13:10:16] Subject 19 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:16] Ended Oct 07 2026 13:10:16 Duration 6.195680618286133 s
+[2026-10-07 13:10:16] === Subject 20 ===
+[2026-10-07 13:10:16] Started Oct 07 2026 13:10:16
+[2026-10-07 13:10:16] Seed is 42
+[2026-10-07 13:10:19] Subject 20 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:19] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.58 | Eval Acc: 0.50
+[2026-10-07 13:10:20] Subject 20 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:20] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.10 | Eval Acc: 0.50
+[2026-10-07 13:10:21] Subject 20 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:21] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.27 | Eval Acc: 0.50
+[2026-10-07 13:10:22] Subject 20 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:22] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.50 | Eval Acc: 0.50
+[2026-10-07 13:10:22] Subject 20 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:22] Ended Oct 07 2026 13:10:22 Duration 5.6575706005096436 s
+[2026-10-07 13:10:22] === Subject 21 ===
+[2026-10-07 13:10:22] Started Oct 07 2026 13:10:22
+[2026-10-07 13:10:22] Seed is 42
+[2026-10-07 13:10:25] Subject 21 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:25] Train Loss: 0.11 | Train Acc: 0.50 | Eval Loss: 3.54 | Eval Acc: 0.50
+[2026-10-07 13:10:26] Subject 21 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:26] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.05 | Eval Acc: 0.50
+[2026-10-07 13:10:28] Subject 21 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:28] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.24 | Eval Acc: 0.50
+[2026-10-07 13:10:29] Subject 21 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:29] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.46 | Eval Acc: 0.50
+[2026-10-07 13:10:29] Subject 21 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:29] Ended Oct 07 2026 13:10:29 Duration 7.052198648452759 s
+[2026-10-07 13:10:29] === Subject 22 ===
+[2026-10-07 13:10:29] Started Oct 07 2026 13:10:29
+[2026-10-07 13:10:29] Seed is 42
+[2026-10-07 13:10:32] Subject 22 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:32] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.58 | Eval Acc: 0.50
+[2026-10-07 13:10:33] Subject 22 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:33] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.08 | Eval Acc: 0.50
+[2026-10-07 13:10:35] Subject 22 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:35] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.25 | Eval Acc: 0.50
+[2026-10-07 13:10:36] Subject 22 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:36] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.44 | Eval Acc: 0.50
+[2026-10-07 13:10:36] Subject 22 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:36] Ended Oct 07 2026 13:10:36 Duration 6.900539398193359 s
+[2026-10-07 13:10:36] === Subject 23 ===
+[2026-10-07 13:10:36] Started Oct 07 2026 13:10:36
+[2026-10-07 13:10:36] Seed is 42
+[2026-10-07 13:10:39] Subject 23 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:39] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.59 | Eval Acc: 0.50
+[2026-10-07 13:10:40] Subject 23 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:40] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.06 | Eval Acc: 0.50
+[2026-10-07 13:10:41] Subject 23 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:41] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.28 | Eval Acc: 0.50
+[2026-10-07 13:10:42] Subject 23 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:42] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.49 | Eval Acc: 0.50
+[2026-10-07 13:10:42] Subject 23 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:42] Ended Oct 07 2026 13:10:42 Duration 6.020607948303223 s
+[2026-10-07 13:10:42] === Subject 24 ===
+[2026-10-07 13:10:42] Started Oct 07 2026 13:10:42
+[2026-10-07 13:10:42] Seed is 42
+[2026-10-07 13:10:45] Subject 24 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:45] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.55 | Eval Acc: 0.50
+[2026-10-07 13:10:46] Subject 24 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:46] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.02 | Eval Acc: 0.50
+[2026-10-07 13:10:47] Subject 24 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:47] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.22 | Eval Acc: 0.50
+[2026-10-07 13:10:48] Subject 24 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:48] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.42 | Eval Acc: 0.50
+[2026-10-07 13:10:48] Subject 24 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:48] Ended Oct 07 2026 13:10:48 Duration 6.031658411026001 s
+[2026-10-07 13:10:48] === Subject 25 ===
+[2026-10-07 13:10:48] Started Oct 07 2026 13:10:48
+[2026-10-07 13:10:48] Seed is 42
+[2026-10-07 13:10:51] Subject 25 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:51] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.55 | Eval Acc: 0.50
+[2026-10-07 13:10:52] Subject 25 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:52] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.04 | Eval Acc: 0.50
+[2026-10-07 13:10:53] Subject 25 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:53] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.24 | Eval Acc: 0.50
+[2026-10-07 13:10:54] Subject 25 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:10:54] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.45 | Eval Acc: 0.50
+[2026-10-07 13:10:54] Subject 25 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:10:54] Ended Oct 07 2026 13:10:54 Duration 5.89044451713562 s
+[2026-10-07 13:10:54] === Subject 26 ===
+[2026-10-07 13:10:54] Started Oct 07 2026 13:10:54
+[2026-10-07 13:10:54] Seed is 42
+[2026-10-07 13:10:56] Subject 26 | Epoch 1/5 | LR 5e-05
+[2026-10-07 13:10:56] Train Loss: 0.10 | Train Acc: 0.50 | Eval Loss: 3.59 | Eval Acc: 0.50
+[2026-10-07 13:10:57] Subject 26 | Epoch 2/5 | LR 5e-05
+[2026-10-07 13:10:57] Train Loss: 0.06 | Train Acc: 0.50 | Eval Loss: 4.07 | Eval Acc: 0.50
+[2026-10-07 13:10:58] Subject 26 | Epoch 3/5 | LR 5e-05
+[2026-10-07 13:10:58] Train Loss: 0.05 | Train Acc: 0.50 | Eval Loss: 4.25 | Eval Acc: 0.50
+[2026-10-07 13:11:00] Subject 26 | Epoch 4/5 | LR 5e-05
+[2026-10-07 13:11:00] Train Loss: 0.04 | Train Acc: 0.50 | Eval Loss: 4.46 | Eval Acc: 0.50
+[2026-10-07 13:11:00] Subject 26 early stopping at epoch 4: eval loss not improved for 3 epochs
+[2026-10-07 13:11:00] Ended Oct 07 2026 13:11:00 Duration 6.003767728805542 s

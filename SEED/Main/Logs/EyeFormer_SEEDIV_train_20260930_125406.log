@@ -1,0 +1,20 @@
+[2026-09-30 12:54:06] Logging to Logs/EyeFormer_SEEDIV_train_20260930_125406.log
+[2026-09-30 12:54:06] === Subject 1 ===
+[2026-09-30 12:54:06] Started Sep 30 2026 12:54:06
+[2026-09-30 12:54:06] Seed is 42
+[2026-09-30 12:54:48] Subject 1 | Epoch 1/5 | LR 5e-05
+[2026-09-30 12:54:48] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 12:55:09] Subject 1 | Epoch 2/5 | LR 5e-05
+[2026-09-30 12:55:09] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 12:55:28] Subject 1 | Epoch 3/5 | LR 5e-05
+[2026-09-30 12:55:28] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 12:55:48] Subject 1 | Epoch 4/5 | LR 5e-05
+[2026-09-30 12:55:48] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 12:56:08] Subject 1 | Epoch 5/5 | LR 5e-05
+[2026-09-30 12:56:08] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 12:56:09] Ended Sep 30 2026 12:56:09 Duration 122.59709763526917 s
+[2026-09-30 12:56:09] === Subject 2 ===
+[2026-09-30 12:56:09] Started Sep 30 2026 12:56:09
+[2026-09-30 12:56:09] Seed is 42
+[2026-09-30 12:56:48] Subject 2 | Epoch 1/5 | LR 5e-05
+[2026-09-30 12:56:48] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27

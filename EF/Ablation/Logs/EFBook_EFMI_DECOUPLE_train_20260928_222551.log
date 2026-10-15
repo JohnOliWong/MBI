@@ -1,0 +1,3 @@
+[2026-09-28 22:25:51] Logging to Logs/EFBook_EFMI_DECOUPLE_train_20260928_222551.log
+[2026-09-28 22:25:51] Ablation Type: DECOUPLE | Dataset: EFMI
+[2026-09-28 22:25:51] Flags: {'use_ot_loss': True, 'use_disentangling': False, 'use_private_codebook': True, 'use_shared_codebook': True}

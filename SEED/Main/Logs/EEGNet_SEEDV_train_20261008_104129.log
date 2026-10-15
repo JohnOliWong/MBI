@@ -1,0 +1,23 @@
+[2026-10-08 10:41:29] Logging to Logs/EEGNet_SEEDV_train_20261008_104129.log
+[2026-10-08 10:41:29] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-08 10:41:29] Val subjects:   [11, 12, 13]
+[2026-10-08 10:41:29] Test subjects:  [14, 15, 16]
+[2026-10-08 10:48:16] ==================== EEGNet Model Structure ====================
+[2026-10-08 10:48:16] Layer Count: AvgPool2d=2, BatchNorm2d=3, Conv2d=4, Dropout=2, EEGNet=1, ELU=2, Linear=1, Sequential=1
+[2026-10-08 10:48:16] ---- Convolution Layers (4) ----
+[2026-10-08 10:48:16]    1. conv1                                         Conv2d  in=1    out=8    kernel=(1, 64) stride=(1, 1) padding=('same',) groups=1
+[2026-10-08 10:48:16]    2. depthwise_conv2                               Conv2d  in=8    out=32   kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=8
+[2026-10-08 10:48:16]    3. separable_conv3.0                             Conv2d  in=32   out=32   kernel=(1, 16) stride=(1, 1) padding=('same',) groups=32
+[2026-10-08 10:48:16]    4. separable_conv3.1                             Conv2d  in=32   out=4    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 10:48:16] Total Parameters: 3,805 (trainable: 3,805)
+[2026-10-08 10:48:16] ====================================================
+[2026-10-08 10:48:29] Epoch 1/5 | LR 5e-05
+[2026-10-08 10:48:29] Train Loss: 1.74 | Train Acc: 20.82 | Val Loss: 1.70 | Val Acc: 20.44
+[2026-10-08 10:48:41] Epoch 2/5 | LR 5e-05
+[2026-10-08 10:48:41] Train Loss: 1.65 | Train Acc: 22.25 | Val Loss: 1.68 | Val Acc: 21.94
+[2026-10-08 10:48:57] Epoch 3/5 | LR 5e-05
+[2026-10-08 10:48:57] Train Loss: 1.63 | Train Acc: 23.12 | Val Loss: 1.69 | Val Acc: 22.98
+[2026-10-08 10:49:12] Epoch 4/5 | LR 5e-05
+[2026-10-08 10:49:12] Train Loss: 1.61 | Train Acc: 25.49 | Val Loss: 1.79 | Val Acc: 23.79
+[2026-10-08 10:49:27] Early stopping at epoch 5: val loss not improved for 3 epochs
+[2026-10-08 10:49:29] === TEST === Acc: 25.47 | Precision: 25.19 | B-ACC: 24.77 | W-F1: 22.23 | Kappa: 0.0593 | AUC: 0.5470

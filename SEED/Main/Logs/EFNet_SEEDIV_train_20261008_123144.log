@@ -1,0 +1,51 @@
+[2026-10-08 12:31:44] Logging to Logs/EFNet_SEEDIV_train_20261008_123144.log
+[2026-10-08 12:31:44] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-10-08 12:31:44] Val subjects:   [9, 10, 11]
+[2026-10-08 12:31:44] Test subjects:  [12, 13, 14]
+[2026-10-08 12:32:01] ==================== EFNet Model Structure ====================
+[2026-10-08 12:32:01] Layer Count: AdaptiveAvgPool2d=1, BatchNorm2d=4, Conv2d=6, Dropout=5, EF_Net=1, Linear=6, MaxPool2d=2, ReLU=11, Sequential=12
+[2026-10-08 12:32:01] ---- Convolution Layers (6) ----
+[2026-10-08 12:32:01]    1. eeg_conv1.0                                   Conv2d  in=1    out=8    kernel=(1, 16) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:32:01]    2. eeg_conv2.0                                   Conv2d  in=8    out=8    kernel=(1, 16) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:32:01]    3. eeg_conv4.0                                   Conv2d  in=8    out=16   kernel=(8, 8) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:32:01]    4. eeg_conv5.0                                   Conv2d  in=16   out=16   kernel=(8, 8) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:32:01]    5. eye_conv1.0                                   Conv2d  in=1    out=8    kernel=(31, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 12:32:01]    6. eye_conv2.0                                   Conv2d  in=8    out=16   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-08 12:32:01] Total Parameters: 205,772 (trainable: 205,772)
+[2026-10-08 12:32:01] ====================================================
+[2026-10-08 12:32:23] Epoch 1/100 | LR 5e-05
+[2026-10-08 12:32:23] Train Loss: 1.38 | Train Acc: 28.18 | Val Loss: 1.37 | Val Acc: 30.21
+[2026-10-08 12:32:43] Epoch 2/100 | LR 5e-05
+[2026-10-08 12:32:43] Train Loss: 1.35 | Train Acc: 34.87 | Val Loss: 1.31 | Val Acc: 35.82
+[2026-10-08 12:33:04] Epoch 3/100 | LR 5e-05
+[2026-10-08 12:33:04] Train Loss: 1.28 | Train Acc: 41.29 | Val Loss: 1.29 | Val Acc: 37.88
+[2026-10-08 12:33:25] Epoch 4/100 | LR 5e-05
+[2026-10-08 12:33:25] Train Loss: 1.21 | Train Acc: 44.93 | Val Loss: 1.35 | Val Acc: 38.18
+[2026-10-08 12:33:46] Epoch 5/100 | LR 5e-05
+[2026-10-08 12:33:46] Train Loss: 1.18 | Train Acc: 46.55 | Val Loss: 1.37 | Val Acc: 41.13
+[2026-10-08 12:34:07] Epoch 6/100 | LR 0.0005
+[2026-10-08 12:34:07] Train Loss: 1.10 | Train Acc: 51.09 | Val Loss: 1.40 | Val Acc: 45.23
+[2026-10-08 12:34:28] Epoch 7/100 | LR 0.0005
+[2026-10-08 12:34:28] Train Loss: 1.01 | Train Acc: 56.96 | Val Loss: 1.51 | Val Acc: 44.94
+[2026-10-08 12:34:48] Epoch 8/100 | LR 0.0005
+[2026-10-08 12:34:48] Train Loss: 0.92 | Train Acc: 61.94 | Val Loss: 1.48 | Val Acc: 50.10
+[2026-10-08 12:35:10] Epoch 9/100 | LR 0.0004
+[2026-10-08 12:35:10] Train Loss: 0.84 | Train Acc: 66.65 | Val Loss: 1.44 | Val Acc: 52.69
+[2026-10-08 12:35:34] Epoch 10/100 | LR 0.0004
+[2026-10-08 12:35:34] Train Loss: 0.78 | Train Acc: 69.49 | Val Loss: 1.51 | Val Acc: 52.03
+[2026-10-08 12:35:55] Epoch 11/100 | LR 0.0004
+[2026-10-08 12:35:55] Train Loss: 0.73 | Train Acc: 71.84 | Val Loss: 1.58 | Val Acc: 52.64
+[2026-10-08 12:36:17] Epoch 12/100 | LR 0.0004
+[2026-10-08 12:36:17] Train Loss: 0.70 | Train Acc: 73.15 | Val Loss: 1.49 | Val Acc: 54.30
+[2026-10-08 12:36:37] Epoch 13/100 | LR 0.0004
+[2026-10-08 12:36:37] Train Loss: 0.68 | Train Acc: 73.76 | Val Loss: 1.57 | Val Acc: 51.78
+[2026-10-08 12:36:57] Epoch 14/100 | LR 0.0004
+[2026-10-08 12:36:57] Train Loss: 0.67 | Train Acc: 74.74 | Val Loss: 1.55 | Val Acc: 53.59
+[2026-10-08 12:37:17] Epoch 15/100 | LR 0.00032
+[2026-10-08 12:37:17] Train Loss: 0.65 | Train Acc: 75.41 | Val Loss: 1.65 | Val Acc: 53.15
+[2026-10-08 12:37:38] Epoch 16/100 | LR 0.00032
+[2026-10-08 12:37:38] Train Loss: 0.63 | Train Acc: 75.81 | Val Loss: 1.54 | Val Acc: 54.12
+[2026-10-08 12:37:58] Epoch 17/100 | LR 0.00032
+[2026-10-08 12:37:58] Train Loss: 0.61 | Train Acc: 77.15 | Val Loss: 1.66 | Val Acc: 52.34
+[2026-10-08 12:38:18] Early stopping at epoch 18: val loss not improved for 15 epochs
+[2026-10-08 12:38:21] === TEST === Acc: 59.45 | Precision: 59.74 | B-ACC: 58.36 | W-F1: 58.38 | Kappa: 0.4544 | AUC: 0.8397

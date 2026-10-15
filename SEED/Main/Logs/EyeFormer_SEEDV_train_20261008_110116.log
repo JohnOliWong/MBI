@@ -1,0 +1,21 @@
+[2026-10-08 11:01:16] Logging to Logs/EyeFormer_SEEDV_train_20261008_110116.log
+[2026-10-08 11:01:16] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-08 11:01:16] Val subjects:   [11, 12, 13]
+[2026-10-08 11:01:16] Test subjects:  [14, 15, 16]
+[2026-10-08 11:04:03] ==================== EyeFormer Model Structure ====================
+[2026-10-08 11:04:03] Layer Count: Dropout=14, Embedding=1, EyeFormer=1, EyeFormerAttention=4, EyeFormerEmbeddings=1, EyeFormerEncoder=1, EyeFormerIntermediate=4, EyeFormerLayer=4, EyeFormerOutput=4, EyeFormerSelfAttention=4, EyeFormerSelfOutput=4, GELU=4, LayerNorm=9, Linear=26, ModuleList=1
+[2026-10-08 11:04:03] ---- Convolution Layers (0) ----
+[2026-10-08 11:04:03]   (no convolution layers)
+[2026-10-08 11:04:03] Total Parameters: 136,581 (trainable: 136,581)
+[2026-10-08 11:04:03] ====================================================
+[2026-10-08 11:04:17] Epoch 1/5 | LR 5e-05
+[2026-10-08 11:04:17] Train Loss: 1.75 | Train Acc: 25.11 | Val Loss: 1.45 | Val Acc: 31.47
+[2026-10-08 11:04:31] Epoch 2/5 | LR 5e-05
+[2026-10-08 11:04:31] Train Loss: 1.61 | Train Acc: 28.79 | Val Loss: 1.43 | Val Acc: 32.35
+[2026-10-08 11:04:43] Epoch 3/5 | LR 5e-05
+[2026-10-08 11:04:43] Train Loss: 1.57 | Train Acc: 31.02 | Val Loss: 1.44 | Val Acc: 28.98
+[2026-10-08 11:04:57] Epoch 4/5 | LR 5e-05
+[2026-10-08 11:04:57] Train Loss: 1.53 | Train Acc: 32.58 | Val Loss: 1.40 | Val Acc: 32.77
+[2026-10-08 11:05:10] Epoch 5/5 | LR 5e-05
+[2026-10-08 11:05:10] Train Loss: 1.50 | Train Acc: 33.27 | Val Loss: 1.40 | Val Acc: 32.27
+[2026-10-08 11:05:11] === TEST === Acc: 35.45 | Precision: 27.43 | B-ACC: 32.61 | W-F1: 26.32 | Kappa: 0.1673 | AUC: 0.7096

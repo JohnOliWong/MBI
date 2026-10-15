@@ -1,0 +1,61 @@
+[2026-10-08 14:42:56] Logging to Logs/EFBook_SEEDIV_train_20261008_144256.log
+[2026-10-08 14:42:56] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-10-08 14:42:56] Val subjects:   [9, 10, 11]
+[2026-10-08 14:42:56] Test subjects:  [12, 13, 14]
+[2026-10-08 14:43:22] ==================== EFBook Model Structure ====================
+[2026-10-08 14:43:22] Layer Count: Attention=8, AttentionFusion=3, AvgPool2d=6, BatchNorm2d=10, CLS_Token=2, Classifier=1, Conv2d=14, Cosine_Loss=1, DWSConv=4, Dropout=39, EEGTemporalConvLayer=1, EF_Book=1, EGA=1, Encoder_Common=2, Encoder_EF=1, EyeTemporalConvLayer=1, FFN=8, GELU=8, LayerNorm=16, Linear=52, MultiheadAttention=1, NonDynamicallyQuantizableLinear=1, Positional_Embedding=2, Quantization=3, ReLU=9, Self_Encoder=8, Sequential=25, Softmax=3, TemporalConvLayer=1, Transformer=1, Transformer_Encoder=2
+[2026-10-08 14:43:22] ---- Convolution Layers (14) ----
+[2026-10-08 14:43:22]    1. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block1.0 Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-08 14:43:22]    2. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-08 14:43:22]    3. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 14:43:22]    4. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block3.0 Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-08 14:43:22]    5. ef_conv.temporal_conv_layer.eye_temporal_projection.eye_block1.0 Conv2d  in=1    out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-08 14:43:22]    6. ef_conv.temporal_conv_layer.eye_temporal_projection.eye_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(31, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-08 14:43:22]    7. ef_conv.temporal_conv_layer.eye_temporal_projection.eye_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 14:43:22]    8. ef_conv.temporal_conv_layer.eye_temporal_projection.eye_block3.0 Conv2d  in=64   out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-08 14:43:22]    9. eeg_common_conv.conv1                         Conv2d  in=1    out=4    kernel=(1, 800) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 14:43:22]   10. eeg_common_conv.conv2.depth_conv              Conv2d  in=4    out=4    kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-08 14:43:22]   11. eeg_common_conv.conv2.point_conv              Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 14:43:22]   12. eye_common_conv.conv1                         Conv2d  in=1    out=4    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 14:43:22]   13. eye_common_conv.conv2.depth_conv              Conv2d  in=4    out=4    kernel=(31, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-08 14:43:22]   14. eye_common_conv.conv2.point_conv              Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 14:43:22] ---- Codebooks (3) ----
+[2026-10-08 14:43:22]   eeg_quantizer                                 size=256   shape=(256, 64)
+[2026-10-08 14:43:22]   eye_quantizer                                 size=256   shape=(256, 64)
+[2026-10-08 14:43:22]   fusion_quantizer                              size=256   shape=(256, 64)
+[2026-10-08 14:43:22] Total Parameters: 431,471 (trainable: 431,471)
+[2026-10-08 14:43:22] ====================================================
+[2026-10-08 14:44:59] Epoch 1/100 | LR 5e-05
+[2026-10-08 14:44:59] Train Loss: 7.00 | Train Acc: 26.08 | Val Loss: 2.67 | Val Acc: 27.43
+[2026-10-08 14:46:32] Epoch 2/100 | LR 5e-05
+[2026-10-08 14:46:32] Train Loss: 5.27 | Train Acc: 26.41 | Val Loss: 2.42 | Val Acc: 27.01
+[2026-10-08 14:48:10] Epoch 3/100 | LR 5e-05
+[2026-10-08 14:48:10] Train Loss: 5.02 | Train Acc: 26.71 | Val Loss: 2.60 | Val Acc: 27.31
+[2026-10-08 14:49:49] Epoch 4/100 | LR 5e-05
+[2026-10-08 14:49:49] Train Loss: 4.94 | Train Acc: 27.17 | Val Loss: 2.59 | Val Acc: 27.33
+[2026-10-08 14:51:29] Epoch 5/100 | LR 5e-05
+[2026-10-08 14:51:29] Train Loss: 4.90 | Train Acc: 27.10 | Val Loss: 2.43 | Val Acc: 27.33
+[2026-10-08 14:53:10] Epoch 6/100 | LR 0.0005
+[2026-10-08 14:53:10] Train Loss: 5.03 | Train Acc: 27.79 | Val Loss: 2.70 | Val Acc: 27.23
+[2026-10-08 14:54:46] Epoch 7/100 | LR 0.0005
+[2026-10-08 14:54:46] Train Loss: 5.10 | Train Acc: 31.38 | Val Loss: 3.45 | Val Acc: 27.45
+[2026-10-08 14:56:23] Epoch 8/100 | LR 0.0004
+[2026-10-08 14:56:23] Train Loss: 5.19 | Train Acc: 43.53 | Val Loss: 3.19 | Val Acc: 46.28
+[2026-10-08 14:57:50] Epoch 9/100 | LR 0.0004
+[2026-10-08 14:57:50] Train Loss: 5.19 | Train Acc: 54.82 | Val Loss: 3.32 | Val Acc: 44.40
+[2026-10-08 14:59:10] Epoch 10/100 | LR 0.0004
+[2026-10-08 14:59:10] Train Loss: 5.12 | Train Acc: 58.23 | Val Loss: 3.08 | Val Acc: 43.18
+[2026-10-08 15:00:35] Epoch 11/100 | LR 0.0004
+[2026-10-08 15:00:35] Train Loss: 5.15 | Train Acc: 62.89 | Val Loss: 3.19 | Val Acc: 47.16
+[2026-10-08 15:02:12] Epoch 12/100 | LR 0.0004
+[2026-10-08 15:02:12] Train Loss: 5.12 | Train Acc: 67.77 | Val Loss: 2.95 | Val Acc: 54.65
+[2026-10-08 15:03:49] Epoch 13/100 | LR 0.0004
+[2026-10-08 15:03:49] Train Loss: 5.24 | Train Acc: 70.77 | Val Loss: 3.20 | Val Acc: 55.17
+[2026-10-08 15:05:28] Epoch 14/100 | LR 0.00032
+[2026-10-08 15:05:28] Train Loss: 5.34 | Train Acc: 72.46 | Val Loss: 3.41 | Val Acc: 56.45
+[2026-10-08 15:07:08] Epoch 15/100 | LR 0.00032
+[2026-10-08 15:07:08] Train Loss: 5.36 | Train Acc: 75.27 | Val Loss: 3.48 | Val Acc: 55.58
+[2026-10-08 15:08:45] Epoch 16/100 | LR 0.00032
+[2026-10-08 15:08:45] Train Loss: 5.29 | Train Acc: 75.85 | Val Loss: 3.26 | Val Acc: 55.76
+[2026-10-08 15:10:21] Early stopping at epoch 17: val loss not improved for 15 epochs
+[2026-10-08 15:10:27] === TEST === Acc: 55.52 | Precision: 66.72 | B-ACC: 53.85 | W-F1: 51.61 | Kappa: 0.3974 | AUC: 0.8352

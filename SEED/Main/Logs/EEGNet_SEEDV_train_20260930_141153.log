@@ -1,0 +1,15 @@
+[2026-09-30 14:11:53] Logging to Logs/EEGNet_SEEDV_train_20260930_141153.log
+[2026-09-30 14:11:53] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-09-30 14:11:53] Val subjects:   [11, 12, 13]
+[2026-09-30 14:11:53] Test subjects:  [14, 15, 16]
+[2026-09-30 14:12:17] Epoch 1/5 | LR 5e-05
+[2026-09-30 14:12:17] Train Loss: 1.74 | Train Acc: 20.82 | Val Loss: 1.70 | Val Acc: 20.42
+[2026-09-30 14:12:29] Epoch 2/5 | LR 5e-05
+[2026-09-30 14:12:29] Train Loss: 1.65 | Train Acc: 22.25 | Val Loss: 1.68 | Val Acc: 21.92
+[2026-09-30 14:12:40] Epoch 3/5 | LR 5e-05
+[2026-09-30 14:12:40] Train Loss: 1.63 | Train Acc: 23.12 | Val Loss: 1.69 | Val Acc: 23.00
+[2026-09-30 14:12:52] Epoch 4/5 | LR 5e-05
+[2026-09-30 14:12:52] Train Loss: 1.61 | Train Acc: 25.49 | Val Loss: 1.79 | Val Acc: 23.79
+[2026-09-30 14:13:04] Epoch 5/5 | LR 5e-05
+[2026-09-30 14:13:04] Train Loss: 1.59 | Train Acc: 26.54 | Val Loss: 1.96 | Val Acc: 24.70
+[2026-09-30 14:13:05] === TEST === Acc: 25.47 | Precision: 25.19 | B-ACC: 24.77 | W-F1: 22.23 | Kappa: 0.0593 | AUC: 0.5470

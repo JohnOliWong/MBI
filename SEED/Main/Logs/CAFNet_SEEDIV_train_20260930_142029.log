@@ -1,0 +1,15 @@
+[2026-09-30 14:20:29] Logging to Logs/CAFNet_SEEDIV_train_20260930_142029.log
+[2026-09-30 14:20:29] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-09-30 14:20:29] Val subjects:   [9, 10, 11]
+[2026-09-30 14:20:29] Test subjects:  [12, 13, 14]
+[2026-09-30 14:20:59] Epoch 1/5 | LR 5e-05
+[2026-09-30 14:20:59] Train Loss: 0.03 | Train Acc: 27.15 | Val Loss: 7.35 | Val Acc: 27.27
+[2026-09-30 14:21:14] Epoch 2/5 | LR 5e-05
+[2026-09-30 14:21:14] Train Loss: 0.01 | Train Acc: 27.27 | Val Loss: 7.91 | Val Acc: 27.27
+[2026-09-30 14:21:29] Epoch 3/5 | LR 5e-05
+[2026-09-30 14:21:29] Train Loss: 0.00 | Train Acc: 27.27 | Val Loss: 8.48 | Val Acc: 27.27
+[2026-09-30 14:21:45] Epoch 4/5 | LR 5e-05
+[2026-09-30 14:21:45] Train Loss: 0.00 | Train Acc: 27.27 | Val Loss: 8.88 | Val Acc: 27.27
+[2026-09-30 14:22:00] Epoch 5/5 | LR 5e-05
+[2026-09-30 14:22:00] Train Loss: 0.00 | Train Acc: 27.27 | Val Loss: 9.06 | Val Acc: 27.27
+[2026-09-30 14:22:02] === TEST === Acc: 27.27 | Precision: 6.82 | B-ACC: 25.00 | W-F1: 11.68 | Kappa: 0.0000 | AUC: 0.5100

@@ -1,0 +1,23 @@
+[2026-10-08 10:49:43] Logging to Logs/Conformer_SEEDIV_train_20261008_104943.log
+[2026-10-08 10:49:43] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-10-08 10:49:43] Val subjects:   [9, 10, 11]
+[2026-10-08 10:49:43] Test subjects:  [12, 13, 14]
+[2026-10-08 10:51:51] ==================== Conformer Model Structure ====================
+[2026-10-08 10:51:51] Layer Count: AvgPool2d=1, BatchNorm2d=1, ClassificationHead=1, Conformer=1, Conv2d=3, Dropout=17, ELU=1, FeedForwardBlock=4, GELU=4, LayerNorm=9, Linear=25, MultiHeadAttention=4, PatchEmbedding=1, Rearrange=1, Reduce=1, ResidualAdd=8, Sequential=10, TransformerEncoder=1, TransformerEncoderBlock=4
+[2026-10-08 10:51:51] ---- Convolution Layers (3) ----
+[2026-10-08 10:51:51]    1. 0.shallownet.0                                Conv2d  in=1    out=60   kernel=(1, 64) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 10:51:51]    2. 0.shallownet.1                                Conv2d  in=60   out=60   kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 10:51:51]    3. 0.projection.0                                Conv2d  in=60   out=60   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 10:51:51] Total Parameters: 407,224 (trainable: 407,224)
+[2026-10-08 10:51:51] ====================================================
+[2026-10-08 10:52:23] Epoch 1/5 | LR 5e-05
+[2026-10-08 10:52:23] Train Loss: 1.43 | Train Acc: 26.94 | Val Loss: 1.40 | Val Acc: 25.87
+[2026-10-08 10:52:50] Epoch 2/5 | LR 5e-05
+[2026-10-08 10:52:50] Train Loss: 1.38 | Train Acc: 29.14 | Val Loss: 1.40 | Val Acc: 30.70
+[2026-10-08 10:53:17] Epoch 3/5 | LR 5e-05
+[2026-10-08 10:53:17] Train Loss: 1.36 | Train Acc: 31.05 | Val Loss: 1.38 | Val Acc: 31.64
+[2026-10-08 10:53:43] Epoch 4/5 | LR 5e-05
+[2026-10-08 10:53:43] Train Loss: 1.35 | Train Acc: 32.54 | Val Loss: 1.38 | Val Acc: 31.04
+[2026-10-08 10:54:10] Epoch 5/5 | LR 5e-05
+[2026-10-08 10:54:10] Train Loss: 1.34 | Train Acc: 33.72 | Val Loss: 1.37 | Val Acc: 32.95
+[2026-10-08 10:54:14] === TEST === Acc: 29.37 | Precision: 28.39 | B-ACC: 27.44 | W-F1: 24.80 | Kappa: 0.0355 | AUC: 0.5482

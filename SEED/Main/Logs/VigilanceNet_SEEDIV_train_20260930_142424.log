@@ -1,0 +1,4 @@
+[2026-09-30 14:24:24] Logging to Logs/VigilanceNet_SEEDIV_train_20260930_142424.log
+[2026-09-30 14:24:24] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-09-30 14:24:24] Val subjects:   [9, 10, 11]
+[2026-09-30 14:24:24] Test subjects:  [12, 13, 14]

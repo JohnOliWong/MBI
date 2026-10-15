@@ -1,0 +1,108 @@
+[2026-10-07 00:17:36] Logging to Logs/EFBook_EFMI_train_20261007_001736.log
+[2026-10-07 00:17:36] === Subject 1 ===
+[2026-10-07 00:17:36] Started Oct 07 2026 00:17:36
+[2026-10-07 00:17:36] Seed is 42
+[2026-10-07 00:17:48] ==================== EFBook Model Structure ====================
+[2026-10-07 00:17:48] Layer Count: Attention=8, AttentionFusion=3, AvgPool2d=6, BatchNorm2d=10, CLS_Token=2, Classifier=1, Conv2d=14, Cosine_Loss=1, DWSConv=4, Dropout=38, EEGTemporalConvLayer=1, EF_Book=1, EGA=1, Encoder_Common=2, Encoder_EF=1, FFN=8, GELU=8, LayerNorm=16, Linear=52, MultiheadAttention=1, NIRSTemporalConvLayer=1, NonDynamicallyQuantizableLinear=1, Positional_Embedding=2, Quantization=3, ReLU=9, Self_Encoder=8, Sequential=25, Softmax=3, TemporalConvLayer=1, Transformer=1, Transformer_Encoder=2
+[2026-10-07 00:17:48] ---- Convolution Layers (14) ----
+[2026-10-07 00:17:48]    1. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block1.0 Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-07 00:17:48]    2. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(30, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-07 00:17:48]    3. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-07 00:17:48]    4. ef_conv.temporal_conv_layer.eeg_temporal_projection.eeg_block3.0 Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-07 00:17:48]    5. ef_conv.temporal_conv_layer.nirs_temporal_projection.nirs_block1.0 Conv2d  in=1    out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-07 00:17:48]    6. ef_conv.temporal_conv_layer.nirs_temporal_projection.nirs_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(72, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-07 00:17:48]    7. ef_conv.temporal_conv_layer.nirs_temporal_projection.nirs_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-07 00:17:48]    8. ef_conv.temporal_conv_layer.nirs_temporal_projection.nirs_block3.0 Conv2d  in=64   out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-07 00:17:48]    9. eeg_common_conv.conv1                         Conv2d  in=1    out=4    kernel=(1, 4000) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-07 00:17:48]   10. eeg_common_conv.conv2.depth_conv              Conv2d  in=4    out=4    kernel=(30, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-07 00:17:48]   11. eeg_common_conv.conv2.point_conv              Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-07 00:17:48]   12. nirs_common_conv.conv1                        Conv2d  in=1    out=4    kernel=(1, 200) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-07 00:17:48]   13. nirs_common_conv.conv2.depth_conv             Conv2d  in=4    out=4    kernel=(72, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-07 00:17:48]   14. nirs_common_conv.conv2.point_conv             Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-07 00:17:48] ---- Codebooks (3) ----
+[2026-10-07 00:17:48]   eeg_quantizer                                 size=128   shape=(128, 64)
+[2026-10-07 00:17:48]   nirs_quantizer                                size=128   shape=(128, 64)
+[2026-10-07 00:17:48]   fusion_quantizer                              size=128   shape=(128, 64)
+[2026-10-07 00:17:48] Total Parameters: 434,413 (trainable: 434,413)
+[2026-10-07 00:17:48] ====================================================
+[2026-10-07 00:17:54] Subject 1 | Epoch 1/100 | LR 5e-05
+[2026-10-07 00:17:54] Train Loss: 1.75 | Train Acc: 0.48 | Eval Loss: 1.30 | Eval Acc: 0.43
+[2026-10-07 00:17:59] Subject 1 | Epoch 2/100 | LR 5e-05
+[2026-10-07 00:17:59] Train Loss: 1.42 | Train Acc: 0.51 | Eval Loss: 1.61 | Eval Acc: 0.57
+[2026-10-07 00:18:04] Subject 1 | Epoch 3/100 | LR 5e-05
+[2026-10-07 00:18:04] Train Loss: 1.20 | Train Acc: 0.52 | Eval Loss: 1.36 | Eval Acc: 0.53
+[2026-10-07 00:18:08] Subject 1 | Epoch 4/100 | LR 5e-05
+[2026-10-07 00:18:08] Train Loss: 1.13 | Train Acc: 0.56 | Eval Loss: 1.16 | Eval Acc: 0.48
+[2026-10-07 00:18:13] Subject 1 | Epoch 5/100 | LR 5e-05
+[2026-10-07 00:18:13] Train Loss: 1.05 | Train Acc: 0.58 | Eval Loss: 0.83 | Eval Acc: 0.60
+[2026-10-07 00:18:18] Subject 1 | Epoch 6/100 | LR 5e-05
+[2026-10-07 00:18:18] Train Loss: 1.06 | Train Acc: 0.56 | Eval Loss: 0.90 | Eval Acc: 0.60
+[2026-10-07 00:18:23] Subject 1 | Epoch 7/100 | LR 5e-05
+[2026-10-07 00:18:23] Train Loss: 0.99 | Train Acc: 0.56 | Eval Loss: 0.90 | Eval Acc: 0.55
+[2026-10-07 00:18:28] Subject 1 | Epoch 8/100 | LR 5e-05
+[2026-10-07 00:18:28] Train Loss: 0.93 | Train Acc: 0.60 | Eval Loss: 0.86 | Eval Acc: 0.62
+[2026-10-07 00:18:33] Subject 1 | Epoch 9/100 | LR 5e-05
+[2026-10-07 00:18:33] Train Loss: 0.93 | Train Acc: 0.60 | Eval Loss: 0.89 | Eval Acc: 0.60
+[2026-10-07 00:18:38] Subject 1 | Epoch 10/100 | LR 5e-05
+[2026-10-07 00:18:38] Train Loss: 0.90 | Train Acc: 0.63 | Eval Loss: 0.77 | Eval Acc: 0.68
+[2026-10-07 00:18:43] Subject 1 | Epoch 11/100 | LR 0.0005
+[2026-10-07 00:18:43] Train Loss: 0.91 | Train Acc: 0.62 | Eval Loss: 0.83 | Eval Acc: 0.62
+[2026-10-07 00:18:48] Subject 1 | Epoch 12/100 | LR 0.0005
+[2026-10-07 00:18:48] Train Loss: 0.86 | Train Acc: 0.63 | Eval Loss: 0.72 | Eval Acc: 0.65
+[2026-10-07 00:18:53] Subject 1 | Epoch 13/100 | LR 0.0005
+[2026-10-07 00:18:53] Train Loss: 0.80 | Train Acc: 0.66 | Eval Loss: 0.75 | Eval Acc: 0.72
+[2026-10-07 00:18:58] Subject 1 | Epoch 14/100 | LR 0.0005
+[2026-10-07 00:18:58] Train Loss: 0.76 | Train Acc: 0.67 | Eval Loss: 0.71 | Eval Acc: 0.77
+[2026-10-07 00:19:03] Subject 1 | Epoch 15/100 | LR 0.0005
+[2026-10-07 00:19:03] Train Loss: 0.72 | Train Acc: 0.71 | Eval Loss: 0.71 | Eval Acc: 0.65
+[2026-10-07 00:19:09] Subject 1 | Epoch 16/100 | LR 0.0005
+[2026-10-07 00:19:09] Train Loss: 0.73 | Train Acc: 0.70 | Eval Loss: 0.61 | Eval Acc: 0.87
+[2026-10-07 00:19:14] Subject 1 | Epoch 17/100 | LR 0.0005
+[2026-10-07 00:19:14] Train Loss: 0.69 | Train Acc: 0.70 | Eval Loss: 0.61 | Eval Acc: 0.78
+[2026-10-07 00:19:19] Subject 1 | Epoch 18/100 | LR 0.0005
+[2026-10-07 00:19:19] Train Loss: 0.66 | Train Acc: 0.74 | Eval Loss: 0.65 | Eval Acc: 0.67
+[2026-10-07 00:19:24] Subject 1 | Epoch 19/100 | LR 0.0005
+[2026-10-07 00:19:24] Train Loss: 0.63 | Train Acc: 0.76 | Eval Loss: 0.62 | Eval Acc: 0.78
+[2026-10-07 00:19:29] Subject 1 | Epoch 20/100 | LR 0.0005
+[2026-10-07 00:19:29] Train Loss: 0.65 | Train Acc: 0.74 | Eval Loss: 0.56 | Eval Acc: 0.82
+[2026-10-07 00:19:34] Subject 1 | Epoch 21/100 | LR 0.0005
+[2026-10-07 00:19:34] Train Loss: 0.62 | Train Acc: 0.76 | Eval Loss: 0.55 | Eval Acc: 0.85
+[2026-10-07 00:19:39] Subject 1 | Epoch 22/100 | LR 0.0005
+[2026-10-07 00:19:39] Train Loss: 0.61 | Train Acc: 0.78 | Eval Loss: 0.58 | Eval Acc: 0.83
+[2026-10-07 00:19:44] Subject 1 | Epoch 23/100 | LR 0.0005
+[2026-10-07 00:19:44] Train Loss: 0.59 | Train Acc: 0.78 | Eval Loss: 0.70 | Eval Acc: 0.65
+[2026-10-07 00:19:50] Subject 1 | Epoch 24/100 | LR 0.0005
+[2026-10-07 00:19:50] Train Loss: 0.57 | Train Acc: 0.79 | Eval Loss: 0.69 | Eval Acc: 0.72
+[2026-10-07 00:19:55] Subject 1 | Epoch 25/100 | LR 0.0005
+[2026-10-07 00:19:55] Train Loss: 0.57 | Train Acc: 0.79 | Eval Loss: 0.50 | Eval Acc: 0.83
+[2026-10-07 00:20:00] Subject 1 | Epoch 26/100 | LR 0.0005
+[2026-10-07 00:20:00] Train Loss: 0.58 | Train Acc: 0.78 | Eval Loss: 0.50 | Eval Acc: 0.85
+[2026-10-07 00:20:05] Subject 1 | Epoch 27/100 | LR 0.0005
+[2026-10-07 00:20:05] Train Loss: 0.59 | Train Acc: 0.79 | Eval Loss: 0.81 | Eval Acc: 0.63
+[2026-10-07 00:20:09] Subject 1 | Epoch 28/100 | LR 0.0005
+[2026-10-07 00:20:09] Train Loss: 0.56 | Train Acc: 0.80 | Eval Loss: 0.70 | Eval Acc: 0.67
+[2026-10-07 00:20:14] Subject 1 | Epoch 29/100 | LR 0.0005
+[2026-10-07 00:20:14] Train Loss: 0.52 | Train Acc: 0.82 | Eval Loss: 0.65 | Eval Acc: 0.72
+[2026-10-07 00:20:19] Subject 1 | Epoch 30/100 | LR 0.0005
+[2026-10-07 00:20:19] Train Loss: 0.51 | Train Acc: 0.82 | Eval Loss: 0.91 | Eval Acc: 0.68
+[2026-10-07 00:20:24] Subject 1 | Epoch 31/100 | LR 0.0005
+[2026-10-07 00:20:24] Train Loss: 0.47 | Train Acc: 0.85 | Eval Loss: 0.90 | Eval Acc: 0.67
+[2026-10-07 00:20:29] Subject 1 | Epoch 32/100 | LR 0.0005
+[2026-10-07 00:20:29] Train Loss: 0.45 | Train Acc: 0.85 | Eval Loss: 0.92 | Eval Acc: 0.68
+[2026-10-07 00:20:34] Subject 1 | Epoch 33/100 | LR 0.0005
+[2026-10-07 00:20:34] Train Loss: 0.46 | Train Acc: 0.85 | Eval Loss: 0.71 | Eval Acc: 0.78
+[2026-10-07 00:20:39] Subject 1 | Epoch 34/100 | LR 0.0005
+[2026-10-07 00:20:39] Train Loss: 0.44 | Train Acc: 0.86 | Eval Loss: 1.16 | Eval Acc: 0.72
+[2026-10-07 00:20:44] Subject 1 | Epoch 35/100 | LR 0.0005
+[2026-10-07 00:20:44] Train Loss: 0.42 | Train Acc: 0.87 | Eval Loss: 0.63 | Eval Acc: 0.77
+[2026-10-07 00:20:49] Subject 1 | Epoch 36/100 | LR 0.0005
+[2026-10-07 00:20:49] Train Loss: 0.38 | Train Acc: 0.88 | Eval Loss: 0.72 | Eval Acc: 0.75
+[2026-10-07 00:20:54] Subject 1 | Epoch 37/100 | LR 0.0004
+[2026-10-07 00:20:54] Train Loss: 0.38 | Train Acc: 0.89 | Eval Loss: 0.75 | Eval Acc: 0.77
+[2026-10-07 00:20:59] Subject 1 | Epoch 38/100 | LR 0.0004
+[2026-10-07 00:20:59] Train Loss: 0.37 | Train Acc: 0.89 | Eval Loss: 0.62 | Eval Acc: 0.75
+[2026-10-07 00:21:04] Subject 1 | Epoch 39/100 | LR 0.0004
+[2026-10-07 00:21:04] Train Loss: 0.35 | Train Acc: 0.89 | Eval Loss: 0.67 | Eval Acc: 0.80
+[2026-10-07 00:21:09] Subject 1 | Epoch 40/100 | LR 0.0004
+[2026-10-07 00:21:09] Train Loss: 0.35 | Train Acc: 0.90 | Eval Loss: 0.84 | Eval Acc: 0.72
+[2026-10-07 00:21:14] Subject 1 early stopping at epoch 41: eval loss not improved for 15 epochs

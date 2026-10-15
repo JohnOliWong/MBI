@@ -1,0 +1,4 @@
+[2026-09-30 14:23:40] Logging to Logs/EFNet_SEEDIV_train_20260930_142340.log
+[2026-09-30 14:23:40] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-09-30 14:23:40] Val subjects:   [9, 10, 11]
+[2026-09-30 14:23:40] Test subjects:  [12, 13, 14]

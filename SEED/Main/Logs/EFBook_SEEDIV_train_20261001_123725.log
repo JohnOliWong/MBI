@@ -1,0 +1,22 @@
+[2026-10-01 12:37:25] Logging to Logs/EFBook_SEEDIV_train_20261001_123725.log
+[2026-10-01 12:37:25] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-10-01 12:37:25] Val subjects:   [9, 10, 11]
+[2026-10-01 12:37:25] Test subjects:  [12, 13, 14]
+[2026-10-01 12:38:35] Epoch 1/100 | LR 5e-05
+[2026-10-01 12:38:35] Train Loss: 155.50 | Train Acc: 25.88 | Val Loss: 215.01 | Val Acc: 27.13
+[2026-10-01 12:39:19] Epoch 2/100 | LR 5e-05
+[2026-10-01 12:39:19] Train Loss: 254.34 | Train Acc: 26.20 | Val Loss: 280.46 | Val Acc: 23.34
+[2026-10-01 12:40:07] Epoch 3/100 | LR 5e-05
+[2026-10-01 12:40:07] Train Loss: 302.01 | Train Acc: 26.88 | Val Loss: 316.45 | Val Acc: 27.23
+[2026-10-01 12:40:50] Epoch 4/100 | LR 5e-05
+[2026-10-01 12:40:50] Train Loss: 330.41 | Train Acc: 26.86 | Val Loss: 341.15 | Val Acc: 26.60
+[2026-10-01 12:41:35] Epoch 5/100 | LR 5e-05
+[2026-10-01 12:41:35] Train Loss: 349.56 | Train Acc: 27.07 | Val Loss: 357.99 | Val Acc: 27.05
+[2026-10-01 12:42:19] Epoch 6/100 | LR 0.0005
+[2026-10-01 12:42:19] Train Loss: 408.76 | Train Acc: 27.12 | Val Loss: 443.97 | Val Acc: 27.03
+[2026-10-01 12:43:02] Epoch 7/100 | LR 0.0004
+[2026-10-01 12:43:02] Train Loss: 473.58 | Train Acc: 27.12 | Val Loss: 496.41 | Val Acc: 27.33
+[2026-10-01 12:43:45] Epoch 8/100 | LR 0.0004
+[2026-10-01 12:43:45] Train Loss: 498.92 | Train Acc: 27.65 | Val Loss: 506.26 | Val Acc: 26.89
+[2026-10-01 12:44:27] Epoch 9/100 | LR 0.0004
+[2026-10-01 12:44:27] Train Loss: 491.03 | Train Acc: 28.94 | Val Loss: 499.74 | Val Acc: 26.96

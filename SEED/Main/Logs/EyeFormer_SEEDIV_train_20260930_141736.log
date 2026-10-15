@@ -1,0 +1,15 @@
+[2026-09-30 14:17:36] Logging to Logs/EyeFormer_SEEDIV_train_20260930_141736.log
+[2026-09-30 14:17:36] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-09-30 14:17:36] Val subjects:   [9, 10, 11]
+[2026-09-30 14:17:36] Test subjects:  [12, 13, 14]
+[2026-09-30 14:18:03] Epoch 1/5 | LR 5e-05
+[2026-09-30 14:18:03] Train Loss: 1.54 | Train Acc: 26.90 | Val Loss: 1.36 | Val Acc: 30.17
+[2026-09-30 14:18:15] Epoch 2/5 | LR 5e-05
+[2026-09-30 14:18:15] Train Loss: 1.44 | Train Acc: 28.74 | Val Loss: 1.35 | Val Acc: 33.51
+[2026-09-30 14:18:28] Epoch 3/5 | LR 5e-05
+[2026-09-30 14:18:28] Train Loss: 1.41 | Train Acc: 30.92 | Val Loss: 1.34 | Val Acc: 34.48
+[2026-09-30 14:18:42] Epoch 4/5 | LR 5e-05
+[2026-09-30 14:18:42] Train Loss: 1.37 | Train Acc: 32.94 | Val Loss: 1.36 | Val Acc: 32.03
+[2026-09-30 14:18:56] Epoch 5/5 | LR 5e-05
+[2026-09-30 14:18:56] Train Loss: 1.35 | Train Acc: 34.64 | Val Loss: 1.36 | Val Acc: 32.55
+[2026-09-30 14:18:59] === TEST === Acc: 40.01 | Precision: 45.76 | B-ACC: 38.87 | W-F1: 38.13 | Kappa: 0.1877 | AUC: 0.6648

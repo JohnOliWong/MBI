@@ -1,0 +1,18 @@
+[2026-10-08 11:07:46] Logging to Logs/CAFNet_SEEDV_train_20261008_110746.log
+[2026-10-08 11:07:46] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-08 11:07:46] Val subjects:   [11, 12, 13]
+[2026-10-08 11:07:46] Test subjects:  [14, 15, 16]
+[2026-10-08 11:08:00] ==================== CAFNet Model Structure ====================
+[2026-10-08 11:08:00] Layer Count: Attention=2, CAFNet=1, ClassificationSubNetwork=1, Dropout=4, EEGSubNet=1, EyeSubNet=1, FeedForward=3, LSTM=1, LayerNorm=5, Linear=17, LinearLayer=2, MCLSTM=1, ModuleList=2, ReLU=6, RegressionSubNetwork=1, Sequential=5
+[2026-10-08 11:08:00] ---- Convolution Layers (0) ----
+[2026-10-08 11:08:00]   (no convolution layers)
+[2026-10-08 11:08:00] Total Parameters: 277,067 (trainable: 277,067)
+[2026-10-08 11:08:00] ====================================================
+[2026-10-08 11:08:15] Epoch 1/5 | LR 5e-05
+[2026-10-08 11:08:15] Train Loss: 0.03 | Train Acc: 20.39 | Val Loss: 7.75 | Val Acc: 20.46
+[2026-10-08 11:08:30] Epoch 2/5 | LR 5e-05
+[2026-10-08 11:08:30] Train Loss: 0.01 | Train Acc: 20.45 | Val Loss: 8.41 | Val Acc: 20.46
+[2026-10-08 11:08:45] Epoch 3/5 | LR 5e-05
+[2026-10-08 11:08:45] Train Loss: 0.00 | Train Acc: 20.45 | Val Loss: 8.83 | Val Acc: 20.46
+[2026-10-08 11:08:58] Early stopping at epoch 4: val loss not improved for 3 epochs
+[2026-10-08 11:08:59] === TEST === Acc: 20.46 | Precision: 4.09 | B-ACC: 20.00 | W-F1: 6.95 | Kappa: 0.0000 | AUC: 0.5128

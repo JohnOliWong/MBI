@@ -1,0 +1,24 @@
+[2026-09-30 02:39:27] Logging to Logs/TSMMF_SEEDIV_train_20260930_023927.log
+[2026-09-30 02:39:27] === Subject 1 ===
+[2026-09-30 02:39:27] Started Sep 30 2026 02:39:27
+[2026-09-30 02:39:27] Seed is 42
+[2026-09-30 02:40:23] Subject 1 | Epoch 1/100 | LR 5e-05
+[2026-09-30 02:40:23] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:40:52] Subject 1 | Epoch 2/100 | LR 5e-05
+[2026-09-30 02:40:52] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:41:20] Subject 1 | Epoch 3/100 | LR 5e-05
+[2026-09-30 02:41:20] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:41:48] Subject 1 | Epoch 4/100 | LR 5e-05
+[2026-09-30 02:41:48] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:42:18] Subject 1 | Epoch 5/100 | LR 5e-05
+[2026-09-30 02:42:18] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:42:48] Subject 1 | Epoch 6/100 | LR 0.0004
+[2026-09-30 02:42:48] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:43:17] Subject 1 | Epoch 7/100 | LR 0.0004
+[2026-09-30 02:43:17] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:43:47] Subject 1 | Epoch 8/100 | LR 0.0004
+[2026-09-30 02:43:47] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:44:16] Subject 1 | Epoch 9/100 | LR 0.0004
+[2026-09-30 02:44:16] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27
+[2026-09-30 02:44:46] Subject 1 | Epoch 10/100 | LR 0.0004
+[2026-09-30 02:44:46] Train Loss: nan | Train Acc: 0.27 | Eval Loss: nan | Eval Acc: 0.27

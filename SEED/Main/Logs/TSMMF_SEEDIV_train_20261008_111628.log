@@ -1,0 +1,29 @@
+[2026-10-08 11:16:28] Logging to Logs/TSMMF_SEEDIV_train_20261008_111628.log
+[2026-10-08 11:16:28] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-10-08 11:16:28] Val subjects:   [9, 10, 11]
+[2026-10-08 11:16:28] Test subjects:  [12, 13, 14]
+[2026-10-08 11:16:45] ==================== TSMMF Model Structure ====================
+[2026-10-08 11:16:45] Layer Count: AddClsToken=2, AttentionFusion=1, AvgPool2d=6, BatchNorm2d=6, ClassificationHead=1, Conv2d=10, CrossEncoderBlock=8, Dropout=74, EEGTemporalConvLayer=1, Embedding=1, EyeTemporalConvLayer=1, FeedForwardBlock=17, GELU=17, HybridTransformer=1, LayerNorm=42, Linear=105, ModalityTypeEmbedding=1, MultiHeadAttention=8, MultiHeadSelfAttention=9, PositionalEmbedding=2, ReLU=6, SWConv2d=4, SelfEncoderBlock=9, Sequential=48, Softmax=1, TemporalConvLayer=1, Transformer=1, TransformerCatEncoder=1, TransformerCrossEncoder=2, TransformerSelfEncoder=2
+[2026-10-08 11:16:45] ---- Convolution Layers (10) ----
+[2026-10-08 11:16:45]    1. temporal_conv_layer.eeg_temporal_projection.eeg_block1.0 Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-08 11:16:45]    2. temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-08 11:16:45]    3. temporal_conv_layer.eeg_temporal_projection.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 11:16:45]    4. temporal_conv_layer.eeg_temporal_projection.eeg_block3.0.depth_conv Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=64
+[2026-10-08 11:16:45]    5. temporal_conv_layer.eeg_temporal_projection.eeg_block3.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 11:16:45]    6. temporal_conv_layer.eye_temporal_projection.eye_block1.0 Conv2d  in=1    out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=1
+[2026-10-08 11:16:45]    7. temporal_conv_layer.eye_temporal_projection.eye_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(31, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-08 11:16:45]    8. temporal_conv_layer.eye_temporal_projection.eye_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 11:16:45]    9. temporal_conv_layer.eye_temporal_projection.eye_block3.0.depth_conv Conv2d  in=64   out=64   kernel=(1, 3) stride=(1, 1) padding=(0, 1) groups=64
+[2026-10-08 11:16:45]   10. temporal_conv_layer.eye_temporal_projection.eye_block3.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 11:16:45] Total Parameters: 594,959 (trainable: 594,959)
+[2026-10-08 11:16:45] ====================================================
+[2026-10-08 11:17:41] Epoch 1/5 | LR 5e-05
+[2026-10-08 11:17:41] Train Loss: 2.89 | Train Acc: 26.87 | Val Loss: 1.46 | Val Acc: 35.77
+[2026-10-08 11:18:44] Epoch 2/5 | LR 5e-05
+[2026-10-08 11:18:44] Train Loss: 2.30 | Train Acc: 29.30 | Val Loss: 1.38 | Val Acc: 33.20
+[2026-10-08 11:19:37] Epoch 3/5 | LR 5e-05
+[2026-10-08 11:19:37] Train Loss: 1.95 | Train Acc: 32.86 | Val Loss: 1.41 | Val Acc: 40.28
+[2026-10-08 11:20:33] Epoch 4/5 | LR 5e-05
+[2026-10-08 11:20:33] Train Loss: 1.69 | Train Acc: 37.43 | Val Loss: 1.45 | Val Acc: 42.18
+[2026-10-08 11:21:28] Early stopping at epoch 5: val loss not improved for 3 epochs
+[2026-10-08 11:21:33] === TEST === Acc: 45.46 | Precision: 51.33 | B-ACC: 44.18 | W-F1: 38.33 | Kappa: 0.2611 | AUC: 0.7584

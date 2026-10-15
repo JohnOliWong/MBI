@@ -1,0 +1,11 @@
+[2026-10-08 03:51:14] Logging to Logs/VigilanceNet_EFMI_train_20261008_035114.log
+[2026-10-08 03:51:14] === Subject 1 ===
+[2026-10-08 03:51:14] Started Oct 08 2026 03:51:14
+[2026-10-08 03:51:14] Seed is 42
+[2026-10-08 03:51:23] ==================== VigilanceNet Model Structure ====================
+[2026-10-08 03:51:23] Layer Count: AdaptiveAvgPool1d=1, BatchNorm1d=2, Conv1d=2, Dropout=3, EmbeddingModule=2, EncoderLayer=1, GELU=1, LayerNorm=3, Linear=7, MultiHeadAttention=1, PositionalWiseFeedForward=1, Regression=1, ScaledDotProductAttention=1, Softmax=1, VigilanceNet=1
+[2026-10-08 03:51:23] ---- Convolution Layers (2) ----
+[2026-10-08 03:51:23]    1. feature_embed1.proj                           Conv1d  in=30   out=64   kernel=(1,) stride=(1,) padding=(0,) groups=1
+[2026-10-08 03:51:23]    2. feature_embed2.proj                           Conv1d  in=72   out=64   kernel=(1,) stride=(1,) padding=(0,) groups=1
+[2026-10-08 03:51:23] Total Parameters: 309,250 (trainable: 309,250)
+[2026-10-08 03:51:23] ====================================================

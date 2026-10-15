@@ -1,0 +1,224 @@
+[2026-09-26 10:34:06] Logging to Logs/EFBook_EFWG_train_20260926_103406.log
+[2026-09-26 10:34:06] === Subject 1 ===
+[2026-09-26 10:34:06] Started Sep 26 2026 10:34:06
+[2026-09-26 10:34:06] Seed is 42
+[2026-09-26 10:34:19] Subject 1 | Epoch 1/100 | LR 5e-05
+[2026-09-26 10:34:19] Train Loss: 2.31 | Train Acc: 0.54 | Eval Loss: 0.90 | Eval Acc: 0.50
+[2026-09-26 10:34:29] Subject 1 | Epoch 2/100 | LR 5e-05
+[2026-09-26 10:34:29] Train Loss: 2.16 | Train Acc: 0.49 | Eval Loss: 0.88 | Eval Acc: 0.50
+[2026-09-26 10:34:37] Subject 1 | Epoch 3/100 | LR 5e-05
+[2026-09-26 10:34:37] Train Loss: 1.76 | Train Acc: 0.52 | Eval Loss: 0.83 | Eval Acc: 0.58
+[2026-09-26 10:34:47] Subject 1 | Epoch 4/100 | LR 5e-05
+[2026-09-26 10:34:47] Train Loss: 1.73 | Train Acc: 0.51 | Eval Loss: 0.89 | Eval Acc: 0.55
+[2026-09-26 10:34:56] Subject 1 | Epoch 5/100 | LR 5e-05
+[2026-09-26 10:34:56] Train Loss: 1.51 | Train Acc: 0.52 | Eval Loss: 1.01 | Eval Acc: 0.52
+[2026-09-26 10:35:06] Subject 1 | Epoch 6/100 | LR 5e-05
+[2026-09-26 10:35:06] Train Loss: 1.42 | Train Acc: 0.52 | Eval Loss: 0.86 | Eval Acc: 0.52
+[2026-09-26 10:35:15] Subject 1 | Epoch 7/100 | LR 5e-05
+[2026-09-26 10:35:15] Train Loss: 1.35 | Train Acc: 0.51 | Eval Loss: 0.83 | Eval Acc: 0.52
+[2026-09-26 10:35:25] Subject 1 | Epoch 8/100 | LR 5e-05
+[2026-09-26 10:35:25] Train Loss: 1.26 | Train Acc: 0.51 | Eval Loss: 0.85 | Eval Acc: 0.43
+[2026-09-26 10:35:35] Subject 1 | Epoch 9/100 | LR 5e-05
+[2026-09-26 10:35:35] Train Loss: 1.21 | Train Acc: 0.53 | Eval Loss: 0.89 | Eval Acc: 0.48
+[2026-09-26 10:35:44] Subject 1 | Epoch 10/100 | LR 5e-05
+[2026-09-26 10:35:44] Train Loss: 1.21 | Train Acc: 0.53 | Eval Loss: 0.92 | Eval Acc: 0.52
+[2026-09-26 10:35:54] Subject 1 | Epoch 11/100 | LR 0.0005
+[2026-09-26 10:35:54] Train Loss: 1.08 | Train Acc: 0.51 | Eval Loss: 0.81 | Eval Acc: 0.52
+[2026-09-26 10:36:06] Subject 1 | Epoch 12/100 | LR 0.0005
+[2026-09-26 10:36:06] Train Loss: 0.94 | Train Acc: 0.52 | Eval Loss: 0.81 | Eval Acc: 0.45
+[2026-09-26 10:36:18] Subject 1 | Epoch 13/100 | LR 0.0005
+[2026-09-26 10:36:18] Train Loss: 0.91 | Train Acc: 0.51 | Eval Loss: 0.81 | Eval Acc: 0.45
+[2026-09-26 10:36:27] Subject 1 | Epoch 14/100 | LR 0.0005
+[2026-09-26 10:36:27] Train Loss: 0.85 | Train Acc: 0.54 | Eval Loss: 0.81 | Eval Acc: 0.43
+[2026-09-26 10:36:36] Subject 1 | Epoch 15/100 | LR 0.0005
+[2026-09-26 10:36:36] Train Loss: 0.83 | Train Acc: 0.55 | Eval Loss: 0.80 | Eval Acc: 0.45
+[2026-09-26 10:36:45] Subject 1 | Epoch 16/100 | LR 0.0005
+[2026-09-26 10:36:45] Train Loss: 0.83 | Train Acc: 0.54 | Eval Loss: 0.79 | Eval Acc: 0.50
+[2026-09-26 10:36:53] Subject 1 | Epoch 17/100 | LR 0.0005
+[2026-09-26 10:36:53] Train Loss: 0.81 | Train Acc: 0.56 | Eval Loss: 0.80 | Eval Acc: 0.47
+[2026-09-26 10:37:01] Subject 1 | Epoch 18/100 | LR 0.0005
+[2026-09-26 10:37:01] Train Loss: 0.80 | Train Acc: 0.58 | Eval Loss: 0.81 | Eval Acc: 0.48
+[2026-09-26 10:37:10] Subject 1 | Epoch 19/100 | LR 0.0005
+[2026-09-26 10:37:10] Train Loss: 0.80 | Train Acc: 0.57 | Eval Loss: 0.81 | Eval Acc: 0.50
+[2026-09-26 10:37:18] Subject 1 | Epoch 20/100 | LR 0.0005
+[2026-09-26 10:37:18] Train Loss: 0.81 | Train Acc: 0.57 | Eval Loss: 0.79 | Eval Acc: 0.52
+[2026-09-26 10:37:27] Subject 1 | Epoch 21/100 | LR 0.0005
+[2026-09-26 10:37:27] Train Loss: 0.79 | Train Acc: 0.58 | Eval Loss: 0.79 | Eval Acc: 0.57
+[2026-09-26 10:37:34] Subject 1 | Epoch 22/100 | LR 0.0005
+[2026-09-26 10:37:34] Train Loss: 0.79 | Train Acc: 0.59 | Eval Loss: 0.80 | Eval Acc: 0.53
+[2026-09-26 10:37:41] Subject 1 | Epoch 23/100 | LR 0.0005
+[2026-09-26 10:37:41] Train Loss: 0.77 | Train Acc: 0.61 | Eval Loss: 0.80 | Eval Acc: 0.57
+[2026-09-26 10:37:49] Subject 1 | Epoch 24/100 | LR 0.0005
+[2026-09-26 10:37:49] Train Loss: 0.78 | Train Acc: 0.62 | Eval Loss: 0.82 | Eval Acc: 0.52
+[2026-09-26 10:37:57] Subject 1 | Epoch 25/100 | LR 0.0005
+[2026-09-26 10:37:57] Train Loss: 0.77 | Train Acc: 0.63 | Eval Loss: 0.81 | Eval Acc: 0.58
+[2026-09-26 10:38:04] Subject 1 | Epoch 26/100 | LR 0.0005
+[2026-09-26 10:38:04] Train Loss: 0.76 | Train Acc: 0.62 | Eval Loss: 0.81 | Eval Acc: 0.57
+[2026-09-26 10:38:12] Subject 1 | Epoch 27/100 | LR 0.0005
+[2026-09-26 10:38:12] Train Loss: 0.74 | Train Acc: 0.65 | Eval Loss: 0.77 | Eval Acc: 0.58
+[2026-09-26 10:38:19] Subject 1 | Epoch 28/100 | LR 0.0005
+[2026-09-26 10:38:19] Train Loss: 0.74 | Train Acc: 0.65 | Eval Loss: 0.77 | Eval Acc: 0.62
+[2026-09-26 10:38:27] Subject 1 | Epoch 29/100 | LR 0.0005
+[2026-09-26 10:38:27] Train Loss: 0.74 | Train Acc: 0.65 | Eval Loss: 0.74 | Eval Acc: 0.58
+[2026-09-26 10:38:35] Subject 1 | Epoch 30/100 | LR 0.0005
+[2026-09-26 10:38:35] Train Loss: 0.73 | Train Acc: 0.66 | Eval Loss: 0.79 | Eval Acc: 0.50
+[2026-09-26 10:38:42] Subject 1 | Epoch 31/100 | LR 0.0005
+[2026-09-26 10:38:42] Train Loss: 0.72 | Train Acc: 0.67 | Eval Loss: 0.81 | Eval Acc: 0.55
+[2026-09-26 10:38:50] Subject 1 | Epoch 32/100 | LR 0.0005
+[2026-09-26 10:38:50] Train Loss: 0.72 | Train Acc: 0.67 | Eval Loss: 0.93 | Eval Acc: 0.47
+[2026-09-26 10:38:58] Subject 1 | Epoch 33/100 | LR 0.0005
+[2026-09-26 10:38:58] Train Loss: 0.70 | Train Acc: 0.68 | Eval Loss: 0.75 | Eval Acc: 0.68
+[2026-09-26 10:39:05] Subject 1 | Epoch 34/100 | LR 0.0005
+[2026-09-26 10:39:05] Train Loss: 0.68 | Train Acc: 0.69 | Eval Loss: 0.86 | Eval Acc: 0.52
+[2026-09-26 10:39:13] Subject 1 | Epoch 35/100 | LR 0.0005
+[2026-09-26 10:39:13] Train Loss: 0.71 | Train Acc: 0.67 | Eval Loss: 0.72 | Eval Acc: 0.67
+[2026-09-26 10:39:19] Subject 1 | Epoch 36/100 | LR 0.0005
+[2026-09-26 10:39:19] Train Loss: 0.68 | Train Acc: 0.70 | Eval Loss: 0.86 | Eval Acc: 0.57
+[2026-09-26 10:39:26] Subject 1 | Epoch 37/100 | LR 0.0005
+[2026-09-26 10:39:26] Train Loss: 0.68 | Train Acc: 0.70 | Eval Loss: 0.73 | Eval Acc: 0.62
+[2026-09-26 10:39:33] Subject 1 | Epoch 38/100 | LR 0.0005
+[2026-09-26 10:39:33] Train Loss: 0.66 | Train Acc: 0.71 | Eval Loss: 0.79 | Eval Acc: 0.57
+[2026-09-26 10:39:40] Subject 1 | Epoch 39/100 | LR 0.0005
+[2026-09-26 10:39:40] Train Loss: 0.65 | Train Acc: 0.73 | Eval Loss: 0.82 | Eval Acc: 0.53
+[2026-09-26 10:39:47] Subject 1 | Epoch 40/100 | LR 0.0005
+[2026-09-26 10:39:47] Train Loss: 0.62 | Train Acc: 0.75 | Eval Loss: 0.73 | Eval Acc: 0.65
+[2026-09-26 10:39:55] Subject 1 | Epoch 41/100 | LR 0.0005
+[2026-09-26 10:39:55] Train Loss: 0.62 | Train Acc: 0.75 | Eval Loss: 0.72 | Eval Acc: 0.62
+[2026-09-26 10:40:04] Subject 1 | Epoch 42/100 | LR 0.0005
+[2026-09-26 10:40:04] Train Loss: 0.61 | Train Acc: 0.75 | Eval Loss: 0.77 | Eval Acc: 0.65
+[2026-09-26 10:40:16] Subject 1 | Epoch 43/100 | LR 0.0005
+[2026-09-26 10:40:16] Train Loss: 0.62 | Train Acc: 0.74 | Eval Loss: 0.77 | Eval Acc: 0.52
+[2026-09-26 10:40:25] Subject 1 | Epoch 44/100 | LR 0.0005
+[2026-09-26 10:40:25] Train Loss: 0.60 | Train Acc: 0.76 | Eval Loss: 0.81 | Eval Acc: 0.55
+[2026-09-26 10:40:34] Subject 1 | Epoch 45/100 | LR 0.0005
+[2026-09-26 10:40:34] Train Loss: 0.58 | Train Acc: 0.77 | Eval Loss: 0.83 | Eval Acc: 0.58
+[2026-09-26 10:40:42] Subject 1 | Epoch 46/100 | LR 0.0004
+[2026-09-26 10:40:42] Train Loss: 0.58 | Train Acc: 0.77 | Eval Loss: 0.76 | Eval Acc: 0.60
+[2026-09-26 10:40:51] Subject 1 | Epoch 47/100 | LR 0.0004
+[2026-09-26 10:40:51] Train Loss: 0.54 | Train Acc: 0.80 | Eval Loss: 0.95 | Eval Acc: 0.55
+[2026-09-26 10:40:59] Subject 1 | Epoch 48/100 | LR 0.0004
+[2026-09-26 10:40:59] Train Loss: 0.53 | Train Acc: 0.79 | Eval Loss: 0.72 | Eval Acc: 0.67
+[2026-09-26 10:41:12] Subject 1 | Epoch 49/100 | LR 0.0004
+[2026-09-26 10:41:12] Train Loss: 0.51 | Train Acc: 0.82 | Eval Loss: 0.75 | Eval Acc: 0.68
+[2026-09-26 10:41:21] Subject 1 | Epoch 50/100 | LR 0.0004
+[2026-09-26 10:41:21] Train Loss: 0.49 | Train Acc: 0.83 | Eval Loss: 0.71 | Eval Acc: 0.67
+[2026-09-26 10:41:30] Subject 1 | Epoch 51/100 | LR 0.0004
+[2026-09-26 10:41:30] Train Loss: 0.48 | Train Acc: 0.83 | Eval Loss: 0.68 | Eval Acc: 0.63
+[2026-09-26 10:41:40] Subject 1 | Epoch 52/100 | LR 0.0004
+[2026-09-26 10:41:40] Train Loss: 0.50 | Train Acc: 0.81 | Eval Loss: 0.72 | Eval Acc: 0.65
+[2026-09-26 10:41:47] Subject 1 | Epoch 53/100 | LR 0.0004
+[2026-09-26 10:41:47] Train Loss: 0.48 | Train Acc: 0.82 | Eval Loss: 0.84 | Eval Acc: 0.48
+[2026-09-26 10:41:55] Subject 1 | Epoch 54/100 | LR 0.0004
+[2026-09-26 10:41:55] Train Loss: 0.48 | Train Acc: 0.82 | Eval Loss: 0.69 | Eval Acc: 0.68
+[2026-09-26 10:42:05] Subject 1 | Epoch 55/100 | LR 0.0004
+[2026-09-26 10:42:05] Train Loss: 0.45 | Train Acc: 0.84 | Eval Loss: 0.64 | Eval Acc: 0.65
+[2026-09-26 10:42:12] Subject 1 | Epoch 56/100 | LR 0.0004
+[2026-09-26 10:42:12] Train Loss: 0.47 | Train Acc: 0.83 | Eval Loss: 0.77 | Eval Acc: 0.53
+[2026-09-26 10:42:20] Subject 1 | Epoch 57/100 | LR 0.0004
+[2026-09-26 10:42:20] Train Loss: 0.46 | Train Acc: 0.84 | Eval Loss: 0.67 | Eval Acc: 0.68
+[2026-09-26 10:42:28] Subject 1 | Epoch 58/100 | LR 0.0004
+[2026-09-26 10:42:28] Train Loss: 0.42 | Train Acc: 0.86 | Eval Loss: 0.67 | Eval Acc: 0.63
+[2026-09-26 10:42:35] Subject 1 | Epoch 59/100 | LR 0.0004
+[2026-09-26 10:42:35] Train Loss: 0.42 | Train Acc: 0.85 | Eval Loss: 0.61 | Eval Acc: 0.73
+[2026-09-26 10:42:44] Subject 1 | Epoch 60/100 | LR 0.0004
+[2026-09-26 10:42:44] Train Loss: 0.40 | Train Acc: 0.87 | Eval Loss: 0.66 | Eval Acc: 0.67
+[2026-09-26 10:42:53] Subject 1 | Epoch 61/100 | LR 0.0004
+[2026-09-26 10:42:53] Train Loss: 0.41 | Train Acc: 0.87 | Eval Loss: 0.69 | Eval Acc: 0.70
+[2026-09-26 10:42:59] Subject 1 | Epoch 62/100 | LR 0.0004
+[2026-09-26 10:42:59] Train Loss: 0.38 | Train Acc: 0.89 | Eval Loss: 0.57 | Eval Acc: 0.70
+[2026-09-26 10:43:08] Subject 1 | Epoch 63/100 | LR 0.0004
+[2026-09-26 10:43:08] Train Loss: 0.41 | Train Acc: 0.87 | Eval Loss: 0.66 | Eval Acc: 0.62
+[2026-09-26 10:43:18] Subject 1 | Epoch 64/100 | LR 0.0004
+[2026-09-26 10:43:18] Train Loss: 0.39 | Train Acc: 0.87 | Eval Loss: 0.55 | Eval Acc: 0.75
+[2026-09-26 10:43:27] Subject 1 | Epoch 65/100 | LR 0.0004
+[2026-09-26 10:43:27] Train Loss: 0.33 | Train Acc: 0.90 | Eval Loss: 0.66 | Eval Acc: 0.70
+[2026-09-26 10:43:36] Subject 1 | Epoch 66/100 | LR 0.0004
+[2026-09-26 10:43:36] Train Loss: 0.40 | Train Acc: 0.87 | Eval Loss: 0.77 | Eval Acc: 0.62
+[2026-09-26 10:43:47] Subject 1 | Epoch 67/100 | LR 0.0004
+[2026-09-26 10:43:47] Train Loss: 0.36 | Train Acc: 0.90 | Eval Loss: 0.66 | Eval Acc: 0.63
+[2026-09-26 10:43:57] Subject 1 | Epoch 68/100 | LR 0.0004
+[2026-09-26 10:43:57] Train Loss: 0.34 | Train Acc: 0.90 | Eval Loss: 0.74 | Eval Acc: 0.65
+[2026-09-26 10:44:08] Subject 1 | Epoch 69/100 | LR 0.0004
+[2026-09-26 10:44:08] Train Loss: 0.36 | Train Acc: 0.89 | Eval Loss: 0.59 | Eval Acc: 0.75
+[2026-09-26 10:44:18] Subject 1 | Epoch 70/100 | LR 0.0004
+[2026-09-26 10:44:18] Train Loss: 0.34 | Train Acc: 0.90 | Eval Loss: 0.55 | Eval Acc: 0.75
+[2026-09-26 10:44:27] Subject 1 | Epoch 71/100 | LR 0.0004
+[2026-09-26 10:44:27] Train Loss: 0.35 | Train Acc: 0.89 | Eval Loss: 0.47 | Eval Acc: 0.80
+[2026-09-26 10:44:37] Subject 1 | Epoch 72/100 | LR 0.0004
+[2026-09-26 10:44:37] Train Loss: 0.34 | Train Acc: 0.90 | Eval Loss: 0.52 | Eval Acc: 0.82
+[2026-09-26 10:44:48] Subject 1 | Epoch 73/100 | LR 0.0004
+[2026-09-26 10:44:48] Train Loss: 0.31 | Train Acc: 0.92 | Eval Loss: 0.36 | Eval Acc: 0.87
+[2026-09-26 10:44:59] Subject 1 | Epoch 74/100 | LR 0.0004
+[2026-09-26 10:44:59] Train Loss: 0.33 | Train Acc: 0.90 | Eval Loss: 0.78 | Eval Acc: 0.62
+[2026-09-26 10:45:09] Subject 1 | Epoch 75/100 | LR 0.0004
+[2026-09-26 10:45:09] Train Loss: 0.33 | Train Acc: 0.90 | Eval Loss: 0.43 | Eval Acc: 0.90
+[2026-09-26 10:45:18] Subject 1 | Epoch 76/100 | LR 0.0004
+[2026-09-26 10:45:18] Train Loss: 0.29 | Train Acc: 0.93 | Eval Loss: 0.49 | Eval Acc: 0.85
+[2026-09-26 10:45:27] Subject 1 | Epoch 77/100 | LR 0.0004
+[2026-09-26 10:45:27] Train Loss: 0.32 | Train Acc: 0.92 | Eval Loss: 0.45 | Eval Acc: 0.78
+[2026-09-26 10:45:37] Subject 1 | Epoch 78/100 | LR 0.0004
+[2026-09-26 10:45:37] Train Loss: 0.32 | Train Acc: 0.91 | Eval Loss: 0.50 | Eval Acc: 0.78
+[2026-09-26 10:45:45] Subject 1 | Epoch 79/100 | LR 0.0004
+[2026-09-26 10:45:45] Train Loss: 0.31 | Train Acc: 0.92 | Eval Loss: 0.45 | Eval Acc: 0.87
+[2026-09-26 10:45:53] Subject 1 | Epoch 80/100 | LR 0.0004
+[2026-09-26 10:45:53] Train Loss: 0.29 | Train Acc: 0.91 | Eval Loss: 0.42 | Eval Acc: 0.83
+[2026-09-26 10:46:03] Subject 1 | Epoch 81/100 | LR 0.0004
+[2026-09-26 10:46:03] Train Loss: 0.30 | Train Acc: 0.92 | Eval Loss: 0.57 | Eval Acc: 0.73
+[2026-09-26 10:46:12] Subject 1 | Epoch 82/100 | LR 0.0004
+[2026-09-26 10:46:12] Train Loss: 0.27 | Train Acc: 0.92 | Eval Loss: 0.43 | Eval Acc: 0.87
+[2026-09-26 10:46:18] Subject 1 | Epoch 83/100 | LR 0.0004
+[2026-09-26 10:46:18] Train Loss: 0.28 | Train Acc: 0.93 | Eval Loss: 0.35 | Eval Acc: 0.93
+[2026-09-26 10:46:28] Subject 1 | Epoch 84/100 | LR 0.0004
+[2026-09-26 10:46:28] Train Loss: 0.23 | Train Acc: 0.95 | Eval Loss: 0.24 | Eval Acc: 0.95
+[2026-09-26 10:46:41] Subject 1 | Epoch 85/100 | LR 0.0004
+[2026-09-26 10:46:41] Train Loss: 0.26 | Train Acc: 0.94 | Eval Loss: 0.30 | Eval Acc: 0.92
+[2026-09-26 10:46:52] Subject 1 | Epoch 86/100 | LR 0.0004
+[2026-09-26 10:46:52] Train Loss: 0.26 | Train Acc: 0.94 | Eval Loss: 0.26 | Eval Acc: 0.92
+[2026-09-26 10:47:02] Subject 1 | Epoch 87/100 | LR 0.0004
+[2026-09-26 10:47:02] Train Loss: 0.28 | Train Acc: 0.92 | Eval Loss: 0.30 | Eval Acc: 0.90
+[2026-09-26 10:47:12] Subject 1 | Epoch 88/100 | LR 0.0004
+[2026-09-26 10:47:12] Train Loss: 0.27 | Train Acc: 0.94 | Eval Loss: 0.25 | Eval Acc: 0.93
+[2026-09-26 10:47:24] Subject 1 | Epoch 89/100 | LR 0.0004
+[2026-09-26 10:47:24] Train Loss: 0.24 | Train Acc: 0.94 | Eval Loss: 0.38 | Eval Acc: 0.85
+[2026-09-26 10:47:33] Subject 1 | Epoch 90/100 | LR 0.0004
+[2026-09-26 10:47:33] Train Loss: 0.33 | Train Acc: 0.91 | Eval Loss: 0.26 | Eval Acc: 0.98
+[2026-09-26 10:47:44] Subject 1 | Epoch 91/100 | LR 0.0004
+[2026-09-26 10:47:44] Train Loss: 0.23 | Train Acc: 0.95 | Eval Loss: 0.30 | Eval Acc: 0.90
+[2026-09-26 10:47:55] Subject 1 | Epoch 92/100 | LR 0.0004
+[2026-09-26 10:47:55] Train Loss: 0.25 | Train Acc: 0.95 | Eval Loss: 0.28 | Eval Acc: 0.95
+[2026-09-26 10:48:06] Subject 1 | Epoch 93/100 | LR 0.0004
+[2026-09-26 10:48:06] Train Loss: 0.25 | Train Acc: 0.94 | Eval Loss: 0.25 | Eval Acc: 0.93
+[2026-09-26 10:48:19] Subject 1 | Epoch 94/100 | LR 0.0004
+[2026-09-26 10:48:19] Train Loss: 0.23 | Train Acc: 0.95 | Eval Loss: 0.25 | Eval Acc: 0.97
+[2026-09-26 10:48:27] Subject 1 | Epoch 95/100 | LR 0.0004
+[2026-09-26 10:48:27] Train Loss: 0.21 | Train Acc: 0.96 | Eval Loss: 0.17 | Eval Acc: 0.98
+[2026-09-26 10:48:36] Subject 1 | Epoch 96/100 | LR 0.0004
+[2026-09-26 10:48:36] Train Loss: 0.22 | Train Acc: 0.95 | Eval Loss: 0.24 | Eval Acc: 0.95
+[2026-09-26 10:48:45] Subject 1 | Epoch 97/100 | LR 0.0004
+[2026-09-26 10:48:45] Train Loss: 0.26 | Train Acc: 0.95 | Eval Loss: 0.25 | Eval Acc: 0.97
+[2026-09-26 10:48:53] Subject 1 | Epoch 98/100 | LR 0.0004
+[2026-09-26 10:48:53] Train Loss: 0.24 | Train Acc: 0.94 | Eval Loss: 0.40 | Eval Acc: 0.87
+[2026-09-26 10:49:01] Subject 1 | Epoch 99/100 | LR 0.0004
+[2026-09-26 10:49:01] Train Loss: 0.25 | Train Acc: 0.95 | Eval Loss: 0.27 | Eval Acc: 0.93
+[2026-09-26 10:49:09] Subject 1 | Epoch 100/100 | LR 0.0004
+[2026-09-26 10:49:09] Train Loss: 0.19 | Train Acc: 0.97 | Eval Loss: 0.23 | Eval Acc: 0.97
+[2026-09-26 10:49:09] Ended Sep 26 2026 10:49:09 Duration 903.4426033496857 s
+[2026-09-26 10:49:09] === Subject 2 ===
+[2026-09-26 10:49:09] Started Sep 26 2026 10:49:09
+[2026-09-26 10:49:09] Seed is 42
+[2026-09-26 10:49:18] Subject 2 | Epoch 1/100 | LR 5e-05
+[2026-09-26 10:49:18] Train Loss: 2.24 | Train Acc: 0.54 | Eval Loss: 0.89 | Eval Acc: 0.50
+[2026-09-26 10:49:28] Subject 2 | Epoch 2/100 | LR 5e-05
+[2026-09-26 10:49:28] Train Loss: 2.11 | Train Acc: 0.50 | Eval Loss: 0.96 | Eval Acc: 0.48
+[2026-09-26 10:49:32] Subject 2 | Epoch 3/100 | LR 5e-05
+[2026-09-26 10:49:32] Train Loss: 1.78 | Train Acc: 0.53 | Eval Loss: 0.94 | Eval Acc: 0.55
+[2026-09-26 10:49:36] Subject 2 | Epoch 4/100 | LR 5e-05
+[2026-09-26 10:49:36] Train Loss: 1.71 | Train Acc: 0.50 | Eval Loss: 0.89 | Eval Acc: 0.50
+[2026-09-26 10:49:39] Subject 2 | Epoch 5/100 | LR 5e-05
+[2026-09-26 10:49:39] Train Loss: 1.58 | Train Acc: 0.52 | Eval Loss: 0.92 | Eval Acc: 0.48
+[2026-09-26 10:49:43] Subject 2 | Epoch 6/100 | LR 5e-05
+[2026-09-26 10:49:43] Train Loss: 1.43 | Train Acc: 0.52 | Eval Loss: 0.85 | Eval Acc: 0.53
+[2026-09-26 10:49:46] Subject 2 | Epoch 7/100 | LR 5e-05
+[2026-09-26 10:49:46] Train Loss: 1.40 | Train Acc: 0.51 | Eval Loss: 0.83 | Eval Acc: 0.53
+[2026-09-26 10:49:50] Subject 2 | Epoch 8/100 | LR 5e-05
+[2026-09-26 10:49:50] Train Loss: 1.28 | Train Acc: 0.52 | Eval Loss: 0.83 | Eval Acc: 0.52

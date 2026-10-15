@@ -1,0 +1,22 @@
+[2026-10-08 11:14:37] Logging to Logs/VigilanceNet_SEEDV_train_20261008_111437.log
+[2026-10-08 11:14:37] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2026-10-08 11:14:37] Val subjects:   [11, 12, 13]
+[2026-10-08 11:14:37] Test subjects:  [14, 15, 16]
+[2026-10-08 11:14:50] ==================== VigilanceNet Model Structure ====================
+[2026-10-08 11:14:50] Layer Count: AdaptiveAvgPool1d=1, BatchNorm1d=2, Conv1d=2, Dropout=3, EmbeddingModule=2, EncoderLayer=1, GELU=1, LayerNorm=3, Linear=7, MultiHeadAttention=1, PositionalWiseFeedForward=1, Regression=1, ScaledDotProductAttention=1, Softmax=1, VigilanceNet=1
+[2026-10-08 11:14:50] ---- Convolution Layers (2) ----
+[2026-10-08 11:14:50]    1. feature_embed1.proj                           Conv1d  in=62   out=64   kernel=(1,) stride=(1,) padding=(0,) groups=1
+[2026-10-08 11:14:50]    2. feature_embed2.proj                           Conv1d  in=33   out=64   kernel=(1,) stride=(1,) padding=(0,) groups=1
+[2026-10-08 11:14:50] Total Parameters: 91,461 (trainable: 91,461)
+[2026-10-08 11:14:50] ====================================================
+[2026-10-08 11:15:08] Epoch 1/5 | LR 5e-05
+[2026-10-08 11:15:08] Train Loss: 1.56 | Train Acc: 31.53 | Val Loss: 1.46 | Val Acc: 30.92
+[2026-10-08 11:15:25] Epoch 2/5 | LR 5e-05
+[2026-10-08 11:15:25] Train Loss: 1.46 | Train Acc: 34.88 | Val Loss: 1.39 | Val Acc: 32.16
+[2026-10-08 11:15:42] Epoch 3/5 | LR 5e-05
+[2026-10-08 11:15:42] Train Loss: 1.43 | Train Acc: 36.94 | Val Loss: 1.34 | Val Acc: 38.84
+[2026-10-08 11:15:59] Epoch 4/5 | LR 5e-05
+[2026-10-08 11:15:59] Train Loss: 1.40 | Train Acc: 38.62 | Val Loss: 1.29 | Val Acc: 41.74
+[2026-10-08 11:16:16] Epoch 5/5 | LR 5e-05
+[2026-10-08 11:16:16] Train Loss: 1.35 | Train Acc: 41.99 | Val Loss: 1.29 | Val Acc: 42.35
+[2026-10-08 11:16:18] === TEST === Acc: 36.94 | Precision: 47.76 | B-ACC: 37.74 | W-F1: 36.08 | Kappa: 0.2146 | AUC: 0.7448

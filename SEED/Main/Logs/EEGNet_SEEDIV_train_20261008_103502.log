@@ -1,0 +1,21 @@
+[2026-10-08 10:35:02] Logging to Logs/EEGNet_SEEDIV_train_20261008_103502.log
+[2026-10-08 10:35:02] Train subjects: [1, 2, 3, 4, 5, 6, 7, 8]
+[2026-10-08 10:35:02] Val subjects:   [9, 10, 11]
+[2026-10-08 10:35:02] Test subjects:  [12, 13, 14]
+[2026-10-08 10:39:31] ==================== EEGNet Model Structure ====================
+[2026-10-08 10:39:31] Layer Count: AvgPool2d=2, BatchNorm2d=3, Conv2d=4, Dropout=2, EEGNet=1, ELU=2, Linear=1, Sequential=1
+[2026-10-08 10:39:31] ---- Convolution Layers (4) ----
+[2026-10-08 10:39:31]    1. conv1                                         Conv2d  in=1    out=8    kernel=(1, 64) stride=(1, 1) padding=('same',) groups=1
+[2026-10-08 10:39:31]    2. depthwise_conv2                               Conv2d  in=8    out=32   kernel=(62, 1) stride=(1, 1) padding=(0, 0) groups=8
+[2026-10-08 10:39:31]    3. separable_conv3.0                             Conv2d  in=32   out=32   kernel=(1, 16) stride=(1, 1) padding=('same',) groups=32
+[2026-10-08 10:39:31]    4. separable_conv3.1                             Conv2d  in=32   out=4    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-08 10:39:31] Total Parameters: 3,704 (trainable: 3,704)
+[2026-10-08 10:39:31] ====================================================
+[2026-10-08 10:39:54] Epoch 1/5 | LR 5e-05
+[2026-10-08 10:39:54] Train Loss: 1.50 | Train Acc: 25.74 | Val Loss: 1.40 | Val Acc: 26.07
+[2026-10-08 10:40:12] Epoch 2/5 | LR 5e-05
+[2026-10-08 10:40:12] Train Loss: 1.43 | Train Acc: 27.16 | Val Loss: 1.41 | Val Acc: 26.24
+[2026-10-08 10:40:31] Epoch 3/5 | LR 5e-05
+[2026-10-08 10:40:31] Train Loss: 1.40 | Train Acc: 29.36 | Val Loss: 1.42 | Val Acc: 26.28
+[2026-10-08 10:40:49] Early stopping at epoch 4: val loss not improved for 3 epochs
+[2026-10-08 10:40:52] === TEST === Acc: 25.92 | Precision: 20.99 | B-ACC: 24.33 | W-F1: 17.69 | Kappa: -0.0088 | AUC: 0.5096
