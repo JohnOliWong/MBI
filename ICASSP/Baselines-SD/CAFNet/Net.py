@@ -1,0 +1,204 @@
+""" Componets of the model
+"""
+import math
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class FeedForward(nn.Module):
+	def __init__(self, 
+				 dim, 
+				 hidden_dim, 
+				 dropout):
+		super().__init__()
+		self.net = nn.Sequential(
+			nn.Linear(dim, hidden_dim),
+			nn.ReLU(),
+			nn.Dropout(dropout),
+			nn.Linear(hidden_dim, dim),
+		)
+		self.norm = nn.LayerNorm(dim)
+
+	def forward(self, x):
+		x = self.net(x)
+		x = self.norm(x)
+		return x
+
+class MCLSTM(nn.Module):
+	def __init__(self, 
+				 input_size1, 
+				 input_size2, 
+				 hidden_size, 
+				 num_layers, 
+				 dropout):
+		super(MCLSTM, self).__init__()
+		self.hidden_size = hidden_size
+		self.linear1 = nn.Linear(input_size1, hidden_size)
+		self.linear2 = nn.Linear(input_size2, hidden_size)
+		self.shared_lstm = nn.LSTM(hidden_size, hidden_size, num_layers, batch_first=True)
+		self.dropout = nn.Dropout(p=dropout)
+
+	def forward(self, eeg, nirs):
+		eeg = self.linear1(eeg)
+		nirs = self.linear2(nirs)
+
+		h = torch.zeros((1, eeg.size(0), self.hidden_size), dtype=eeg.dtype, device=eeg.device)
+		c_e = torch.zeros((1, eeg.size(0), self.hidden_size), dtype=eeg.dtype, device=eeg.device)
+		c_f = torch.zeros((1, nirs.size(0), self.hidden_size), dtype=nirs.dtype, device=nirs.device)
+
+		eeg, _ = self.shared_lstm(eeg, (h, c_e))
+		nirs, _ = self.shared_lstm(nirs, (h, c_f))
+
+		eeg = self.dropout(eeg)
+		nirs = self.dropout(nirs)
+		return eeg, nirs
+	
+class Attention(nn.Module):
+	def __init__(self, 
+				 dim, 
+				 dim_head, 
+				 heads):
+		super(Attention, self).__init__()
+		self.to_Q = nn.Linear(dim, dim_head * heads, bias=False)
+		self.to_K = nn.Linear(dim, dim_head * heads, bias=False)
+		self.to_V = nn.Linear(dim, dim_head * heads, bias=False)
+		self.norm = nn.LayerNorm(dim)
+
+	def attention(self, Q, K, V):
+		d_k = K.size(-1)
+		scores = torch.matmul(Q, K.transpose(1,2)) / math.sqrt(d_k)
+		alpha_n = F.softmax(scores, dim=-1)
+		output = torch.matmul(alpha_n, V)
+		output = output.sum(1)
+		return output, alpha_n
+
+	def forward(self, x):
+		Q = self.to_Q(x)
+		K = self.to_K(x)
+		V = self.to_V(x)
+		out, _ = self.attention(Q, K, V)
+		out = self.norm(out)
+		return out
+
+class LinearLayer(nn.Module):
+	def __init__(self, 
+				 in_dim, 
+				 out_dim):
+		super().__init__()
+		self.clf = nn.Sequential(nn.Linear(in_dim, out_dim))
+
+	def forward(self, x):
+		x = self.clf(x)
+		return x
+
+class EegSubNet(nn.Module):
+	def __init__(self, 
+				 dropout, 
+				 dim, 
+				 heads, 
+				 dim_head, 
+				 mlp_dim):
+		super(EegSubNet, self).__init__()
+		self.SelfAttention = Attention(dim, heads, dim_head)
+		self.FeedForward = FeedForward(dim, mlp_dim, dropout)
+	
+	def forward(self, x):
+		x = self.SelfAttention(x)
+		x = self.FeedForward(x)
+		return x
+
+class NirsSubNet(nn.Module):
+	def __init__(self, 
+				 dropout, 
+				 dim, 
+				 heads, 
+				 dim_head, 
+				 mlp_dim):
+		super(NirsSubNet, self).__init__()
+		self.SelfAttention = Attention(dim, heads, dim_head)
+		self.FeedForward = FeedForward(dim, mlp_dim, dropout)
+	
+	def forward(self, x):
+		x = self.SelfAttention(x)
+		x = self.FeedForward(x)
+		return x
+	
+class RegressionSubNetwork(nn.Module):
+	def __init__(self, 
+				 mlp_dim):
+		super(RegressionSubNetwork, self).__init__()
+		self.layers = nn.ModuleList([LinearLayer(mlp_dim, 1)])
+
+	def forward(self, x):
+		for layer in self.layers:
+			x = layer(x)
+		return x
+
+class ClassificationSubNetwork(nn.Module):
+	def __init__(self, 
+				 mlp_dim, 
+				 num_classes):
+		super(ClassificationSubNetwork, self).__init__()
+		self.layers = nn.ModuleList([LinearLayer(mlp_dim, num_classes)])
+
+	def forward(self, x):
+		for layer in self.layers:
+			x = layer(x)
+		return x
+
+class CAFNet(nn.Module):
+	def __init__(self, 
+				 eeg_dim, 
+				 nirs_dim, 
+				 hidden_size, 
+				 num_layers, 
+				 dim, 
+				 heads, 
+				 dim_head, 
+				 mlp_dim, 
+				 num_classes, 
+				 dropout):
+		super().__init__()
+		self.num_classes = num_classes
+		self.mc_lstm = MCLSTM(eeg_dim, nirs_dim, hidden_size, num_layers, dropout)
+		self.eeg_subnet = EegSubNet(dropout, dim, heads, dim_head, mlp_dim)
+		self.nirs_subnet = NirsSubNet(dropout, dim, heads, dim_head, mlp_dim)
+		self.Regression = RegressionSubNetwork(dim)
+		self.Classification = ClassificationSubNetwork(dim, num_classes)
+		self.FeedForward = FeedForward(mlp_dim, dim, dropout)
+		self.fc = nn.Linear(mlp_dim, num_classes)
+		
+	def confidence_loss(self, TCPLogit, TCPConfidence, label):
+		pred = F.softmax(TCPLogit, dim=1)
+		p_target = torch.gather(input=pred, dim=1, index=label.unsqueeze(dim=1).type(torch.int64)).view(-1)
+		c_loss = torch.mean(F.mse_loss(TCPConfidence.view(-1), p_target, reduction='none'))
+		return c_loss
+
+	def KD_loss(self, TCPLogit_eeg, TCPLogit_nirs):
+		loss1 = nn.KLDivLoss(reduction='batchmean')(F.log_softmax(TCPLogit_eeg, dim=1), F.softmax(TCPLogit_nirs, dim=1))
+		loss2 = nn.KLDivLoss(reduction='batchmean')(F.log_softmax(TCPLogit_nirs, dim=1), F.softmax(TCPLogit_eeg, dim=1))
+		return (loss1 + loss2) / 2
+	
+	def forward(self, eeg, nirs, label):
+		# eeg, nirs = v
+		eeg, nirs = self.mc_lstm(eeg, nirs)
+		eeg = self.eeg_subnet(eeg)
+		nirs = self.nirs_subnet(nirs)
+		
+		TCPConfidence_eeg = self.Regression(eeg) # regression model to return the modality confidence
+		TCPConfidence_nirs = self.Regression(nirs)
+		TCPLogit_eeg = self.Classification(eeg) # un-normalized classification logits
+		TCPLogit_nirs = self.Classification(nirs)
+
+		eeg = eeg * TCPConfidence_eeg
+		nirs = nirs * TCPConfidence_nirs
+		
+		feature = torch.cat([eeg, nirs], dim=1)
+		feature = self.FeedForward(feature)
+		Logit = self.fc(feature)
+		
+		c_loss_eeg = self.confidence_loss(TCPLogit_eeg, TCPConfidence_eeg, label)
+		c_loss_nirs = self.confidence_loss(TCPLogit_nirs, TCPConfidence_nirs, label)
+		c_loss = c_loss_eeg + c_loss_nirs
+		kd_loss = self.KD_loss(TCPLogit_eeg, TCPLogit_nirs)
+		return Logit, c_loss, kd_loss
