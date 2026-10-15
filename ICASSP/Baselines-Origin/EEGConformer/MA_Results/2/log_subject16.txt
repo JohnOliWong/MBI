@@ -1,0 +1,205 @@
+0    0.5
+Precision: 0.76  Recall: 0.50  F1-score: 0.37  Kappa: 0.07
+1    0.5
+Precision: 0.76  Recall: 0.50  F1-score: 0.37  Kappa: 0.07
+2    0.4583333333333333
+Precision: 0.48  Recall: 0.46  F1-score: 0.39  Kappa: -0.03
+3    0.5416666666666666
+Precision: 0.57  Recall: 0.54  F1-score: 0.53  Kappa: 0.11
+4    0.5416666666666666
+Precision: 0.55  Recall: 0.54  F1-score: 0.54  Kappa: 0.10
+5    0.5833333333333334
+Precision: 0.59  Recall: 0.58  F1-score: 0.58  Kappa: 0.17
+6    0.625
+Precision: 0.63  Recall: 0.62  F1-score: 0.63  Kappa: 0.25
+7    0.625
+Precision: 0.63  Recall: 0.62  F1-score: 0.63  Kappa: 0.25
+8    0.6666666666666666
+Precision: 0.67  Recall: 0.67  F1-score: 0.67  Kappa: 0.33
+9    0.6666666666666666
+Precision: 0.67  Recall: 0.67  F1-score: 0.67  Kappa: 0.33
+10    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.62  Kappa: 0.24
+11    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.62  Kappa: 0.24
+12    0.6666666666666666
+Precision: 0.67  Recall: 0.67  F1-score: 0.66  Kappa: 0.32
+13    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+14    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+15    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+16    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+17    0.625
+Precision: 0.64  Recall: 0.62  F1-score: 0.60  Kappa: 0.22
+18    0.625
+Precision: 0.64  Recall: 0.62  F1-score: 0.60  Kappa: 0.22
+19    0.625
+Precision: 0.64  Recall: 0.62  F1-score: 0.60  Kappa: 0.22
+20    0.625
+Precision: 0.64  Recall: 0.62  F1-score: 0.60  Kappa: 0.22
+21    0.625
+Precision: 0.64  Recall: 0.62  F1-score: 0.60  Kappa: 0.22
+22    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+23    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+24    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+25    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+26    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+27    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+28    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+29    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+30    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+31    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+32    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+33    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+34    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+35    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+36    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+37    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+38    0.5416666666666666
+Precision: 0.53  Recall: 0.54  F1-score: 0.53  Kappa: 0.06
+39    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+40    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.56  Kappa: 0.14
+41    0.5416666666666666
+Precision: 0.53  Recall: 0.54  F1-score: 0.53  Kappa: 0.06
+42    0.5416666666666666
+Precision: 0.53  Recall: 0.54  F1-score: 0.53  Kappa: 0.06
+43    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+44    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+45    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+46    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+47    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+48    0.625
+Precision: 0.62  Recall: 0.62  F1-score: 0.61  Kappa: 0.23
+49    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+50    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+51    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+52    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+53    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+54    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+55    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+56    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+57    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+58    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+59    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+60    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+61    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+62    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+63    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+64    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+65    0.5833333333333334
+Precision: 0.58  Recall: 0.58  F1-score: 0.58  Kappa: 0.15
+66    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+67    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+68    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+69    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+70    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+71    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+72    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+73    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+74    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+75    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+76    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+77    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+78    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+79    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+80    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+81    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+82    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+83    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+84    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+85    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+86    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+87    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+88    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+89    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+90    0.5
+Precision: 0.50  Recall: 0.50  F1-score: 0.50  Kappa: -0.01
+91    0.5416666666666666
+Precision: 0.55  Recall: 0.54  F1-score: 0.54  Kappa: 0.08
+92    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+93    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+94    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+95    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+96    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+97    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+98    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+99    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+100    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+101    0.5416666666666666
+Precision: 0.54  Recall: 0.54  F1-score: 0.54  Kappa: 0.07
+102    0.5

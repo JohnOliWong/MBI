@@ -1,0 +1,6 @@
+Accuracy: 0.97
+Precision: 0.95
+Recall: 0.99
+F1: 0.97
+Kappa: 0.93
+

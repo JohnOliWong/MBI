@@ -1,0 +1,5 @@
+Accuracy: 47.47 ± 3.53
+Precision: 49.28 ± 0.10
+Recall: 49.29 ± 6.69
+F1-Score: 49.06 ± 3.41
+Kappa: -0.09

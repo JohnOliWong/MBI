@@ -1,0 +1,12 @@
+Accuracy: 64.81 ± 5.72
+Precision: 65.60 ± 6.45
+Recall: 64.81 ± 5.72
+F1: 63.69 ± 6.822471
+Kappa: 0.29
+
+Accuracy: 72.19 ± 7.26
+Precision: 74.16 ± 7.21
+Recall: 72.19 ± 7.26
+F1: 71.43 ± 7.942857
+Kappa: 0.44
+

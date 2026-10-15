@@ -1,0 +1,6 @@
+Subject 1 : Seed is: 1657
+Subject 1 : The best accuracy is: 1.0
+Subject 1 : The average accuracy is: 66.0
+Subject 2 : Seed is: 685
+Subject 2 : The best accuracy is: 1.0
+Subject 2 : The average accuracy is: 77.0909090909091

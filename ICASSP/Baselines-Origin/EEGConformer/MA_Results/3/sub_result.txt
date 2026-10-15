@@ -1,0 +1,2 @@
+**The average Best accuracy is: 0.7772988505747126
+The average Aver accuracy is: 65.7155172413793

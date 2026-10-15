@@ -1,0 +1,12 @@
+Subject 1 : Seed is: 955
+Subject 1 : The best accuracy is: 0.8125
+Subject 1 : The average accuracy is: 0.6934212962962962
+Subject 2 : Seed is: 955
+Subject 2 : The best accuracy is: 0.53125
+Subject 2 : The average accuracy is: 0.4750138888888889
+Subject 3 : Seed is: 955
+Subject 3 : The best accuracy is: 0.9236111111111112
+Subject 3 : The average accuracy is: 0.8267268518518519
+Subject 4 : Seed is: 955
+Subject 4 : The best accuracy is: 0.6041666666666666
+Subject 4 : The average accuracy is: 0.5127453703703704

@@ -1,0 +1,78 @@
+Subject 1 : Seed is: 1582
+Subject 1 : The best accuracy is: 0.75
+Subject 1 : The average accuracy is: 65.33333333333334
+Subject 2 : Seed is: 373
+Subject 2 : The best accuracy is: 0.625
+Subject 2 : The average accuracy is: 52.99999999999999
+Subject 3 : Seed is: 1406
+Subject 3 : The best accuracy is: 0.6666666666666666
+Subject 3 : The average accuracy is: 56.333333333333336
+Subject 4 : Seed is: 1461
+Subject 4 : The best accuracy is: 0.8333333333333334
+Subject 4 : The average accuracy is: 56.249999999999986
+Subject 5 : Seed is: 1125
+Subject 5 : The best accuracy is: 0.8333333333333334
+Subject 5 : The average accuracy is: 79.83333333333334
+Subject 6 : Seed is: 1699
+Subject 6 : The best accuracy is: 0.75
+Subject 6 : The average accuracy is: 52.166666666666664
+Subject 7 : Seed is: 1759
+Subject 7 : The best accuracy is: 0.7916666666666666
+Subject 7 : The average accuracy is: 69.25000000000001
+Subject 8 : Seed is: 57
+Subject 8 : The best accuracy is: 0.5833333333333334
+Subject 8 : The average accuracy is: 47.74999999999999
+Subject 9 : Seed is: 1851
+Subject 9 : The best accuracy is: 0.75
+Subject 9 : The average accuracy is: 59.91666666666667
+Subject 10 : Seed is: 1909
+Subject 10 : The best accuracy is: 0.5833333333333334
+Subject 10 : The average accuracy is: 39.083333333333336
+Subject 11 : Seed is: 31
+Subject 11 : The best accuracy is: 0.6666666666666666
+Subject 11 : The average accuracy is: 51.583333333333336
+Subject 12 : Seed is: 257
+Subject 12 : The best accuracy is: 0.8333333333333334
+Subject 12 : The average accuracy is: 74.08333333333333
+Subject 13 : Seed is: 1169
+Subject 13 : The best accuracy is: 0.7083333333333334
+Subject 13 : The average accuracy is: 54.99999999999999
+Subject 14 : Seed is: 1215
+Subject 14 : The best accuracy is: 0.9166666666666666
+Subject 14 : The average accuracy is: 81.00000000000001
+Subject 15 : Seed is: 1756
+Subject 15 : The best accuracy is: 0.75
+Subject 15 : The average accuracy is: 58.166666666666664
+Subject 16 : Seed is: 1436
+Subject 16 : The best accuracy is: 0.9166666666666666
+Subject 16 : The average accuracy is: 64.66666666666666
+Subject 17 : Seed is: 1511
+Subject 17 : The best accuracy is: 0.7916666666666666
+Subject 17 : The average accuracy is: 66.25
+Subject 18 : Seed is: 1654
+Subject 18 : The best accuracy is: 0.75
+Subject 18 : The average accuracy is: 65.25
+Subject 19 : Seed is: 103
+Subject 19 : The best accuracy is: 0.8333333333333334
+Subject 19 : The average accuracy is: 66.49999999999999
+Subject 20 : Seed is: 1414
+Subject 20 : The best accuracy is: 0.8333333333333334
+Subject 20 : The average accuracy is: 71.83333333333334
+Subject 21 : Seed is: 294
+Subject 21 : The best accuracy is: 0.7083333333333334
+Subject 21 : The average accuracy is: 48.25
+Subject 22 : Seed is: 93
+Subject 22 : The best accuracy is: 0.6666666666666666
+Subject 22 : The average accuracy is: 50.74999999999999
+Subject 23 : Seed is: 11
+Subject 23 : The best accuracy is: 0.6666666666666666
+Subject 23 : The average accuracy is: 49.25
+Subject 24 : Seed is: 1432
+Subject 24 : The best accuracy is: 0.6666666666666666
+Subject 24 : The average accuracy is: 59.25
+Subject 25 : Seed is: 1660
+Subject 25 : The best accuracy is: 0.75
+Subject 25 : The average accuracy is: 59.416666666666664
+Subject 26 : Seed is: 1744
+Subject 26 : The best accuracy is: 0.9166666666666666
+Subject 26 : The average accuracy is: 79.41666666666666
