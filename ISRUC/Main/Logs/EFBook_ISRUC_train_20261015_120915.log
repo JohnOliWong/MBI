@@ -1,0 +1,23 @@
+[2026-10-15 12:09:15] Logging to Logs/EFBook_ISRUC_train_20261015_120915.log
+[2026-10-15 12:09:15] Train subjects (1): [1]
+[2026-10-15 12:09:15] Val subjects (1): [3]
+[2026-10-15 12:09:15] Test subjects (1): [4]
+[2026-10-15 12:09:29] ==================== EFBook Model Structure ====================
+[2026-10-15 12:09:29] Layer Count: Attention=4, AttentionFusion=2, AvgPool2d=3, BatchNorm2d=5, CLS_Token=1, Classifier=1, Conv2d=7, Cosine_Loss=1, DWSConv=2, Dropout=20, EEGTemporalConvLayer=1, EF_Book=1, EGA=1, Encoder_Common=1, Encoder_EF=1, FFN=4, GELU=4, LayerNorm=8, Linear=27, ModuleList=5, MultiheadAttention=1, NonDynamicallyQuantizableLinear=1, Positional_Embedding=1, Quantization=2, ReLU=5, Self_Encoder=4, Sequential=13, Softmax=2, Transformer_Encoder=1
+[2026-10-15 12:09:29] ---- Convolution Layers (7) ----
+[2026-10-15 12:09:29]    1. ef_conv.temporal_convs.0.eeg_block1.0         Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-15 12:09:29]    2. ef_conv.temporal_convs.0.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(6, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-15 12:09:29]    3. ef_conv.temporal_convs.0.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:09:29]    4. ef_conv.temporal_convs.0.eeg_block3.0         Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-15 12:09:29]    5. common_convs.0.conv1                          Conv2d  in=1    out=4    kernel=(1, 6000) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:09:29]    6. common_convs.0.conv2.depth_conv               Conv2d  in=4    out=4    kernel=(6, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-15 12:09:29]    7. common_convs.0.conv2.point_conv               Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:09:29] ---- Codebooks (2) ----
+[2026-10-15 12:09:29]   quantizers.0                                  size=256   shape=(256, 64)
+[2026-10-15 12:09:29]   fusion_quantizer                              size=256   shape=(256, 64)
+[2026-10-15 12:09:29] Total Parameters: 295,911 (trainable: 295,911)
+[2026-10-15 12:09:29] ====================================================
+[2026-10-15 12:10:32] Epoch 1/1 | LR 0.000500
+[2026-10-15 12:10:32] Train Loss: 4.20 | Train Acc: 31.59 | Val Loss: 3.07 | Val Acc: 28.19
+[2026-10-15 12:10:35] === TEST === Acc: 33.96 | B-ACC: 28.10 | W-F1: 30.92 | Kappa: 0.0971 | AUC: 0.6378
+[2026-10-15 12:10:35] Final TEST: Acc=33.96 W-F1=30.92 Kappa=0.0971 AUC=0.6378

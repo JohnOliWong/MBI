@@ -1,0 +1,25 @@
+[2026-10-15 12:29:21] Logging to Logs/EEGNet_ISRUC_train_20261015_122921.log
+[2026-10-15 12:29:21] Train subjects (78): [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80]
+[2026-10-15 12:29:21] Val subjects (10): [81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
+[2026-10-15 12:29:21] Test subjects (10): [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+[2026-10-15 13:04:52] ==================== EEGNet Model Structure ====================
+[2026-10-15 13:04:52] Layer Count: AvgPool2d=2, BatchNorm2d=3, Conv2d=4, Dropout=2, EEGNet=1, ELU=2, Linear=1, Sequential=1
+[2026-10-15 13:04:52] ---- Convolution Layers (4) ----
+[2026-10-15 13:04:52]    1. conv1                                         Conv2d  in=1    out=8    kernel=(1, 64) stride=(1, 1) padding=('same',) groups=1
+[2026-10-15 13:04:52]    2. depthwise_conv2                               Conv2d  in=8    out=32   kernel=(11, 1) stride=(1, 1) padding=(0, 0) groups=8
+[2026-10-15 13:04:52]    3. separable_conv3.0                             Conv2d  in=32   out=32   kernel=(1, 16) stride=(1, 1) padding=('same',) groups=32
+[2026-10-15 13:04:52]    4. separable_conv3.1                             Conv2d  in=32   out=4    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 13:04:52] Total Parameters: 5,413 (trainable: 5,413)
+[2026-10-15 13:04:52] ====================================================
+[2026-10-15 13:07:05] Epoch 1/5 | LR 0.000050
+[2026-10-15 13:07:05] Train Loss: 1.55 | Train Acc: 32.05 | Val Loss: 1.32 | Val Acc: 45.73
+[2026-10-15 13:09:00] Epoch 2/5 | LR 0.000050
+[2026-10-15 13:09:00] Train Loss: 1.29 | Train Acc: 46.96 | Val Loss: 1.17 | Val Acc: 53.26
+[2026-10-15 13:10:56] Epoch 3/5 | LR 0.000050
+[2026-10-15 13:10:56] Train Loss: 1.19 | Train Acc: 51.16 | Val Loss: 1.15 | Val Acc: 53.49
+[2026-10-15 13:12:54] Epoch 4/5 | LR 0.000050
+[2026-10-15 13:12:54] Train Loss: 1.16 | Train Acc: 52.59 | Val Loss: 1.13 | Val Acc: 54.83
+[2026-10-15 13:15:05] Epoch 5/5 | LR 0.000050
+[2026-10-15 13:15:05] Train Loss: 1.14 | Train Acc: 53.47 | Val Loss: 1.12 | Val Acc: 55.15
+[2026-10-15 13:15:25] === TEST === Acc: 46.24 | B-ACC: 43.82 | W-F1: 40.33 | Kappa: 0.2980 | AUC: 0.7835
+[2026-10-15 13:15:33] Final TEST: Acc=46.24 W-F1=40.33 Kappa=0.2980 AUC=0.7835

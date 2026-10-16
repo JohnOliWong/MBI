@@ -1,0 +1,16 @@
+[2026-10-13 17:02:51] Logging to Logs/Conformer_ISRUC_train_20261013_170251.log
+[2026-10-13 17:02:51] Train subjects (1): [1]
+[2026-10-13 17:02:51] Val subjects (1): [3]
+[2026-10-13 17:02:51] Test subjects (1): [4]
+[2026-10-13 17:02:55] ==================== Conformer Model Structure ====================
+[2026-10-13 17:02:55] Layer Count: AvgPool2d=1, BatchNorm2d=1, ClassificationHead=1, Conformer=1, Conv2d=3, Dropout=17, ELU=1, FeedForwardBlock=4, GELU=4, LayerNorm=9, Linear=25, MultiHeadAttention=4, PatchEmbedding=1, Rearrange=1, Reduce=1, ResidualAdd=8, Sequential=10, TransformerEncoder=1, TransformerEncoderBlock=4
+[2026-10-13 17:02:55] ---- Convolution Layers (3) ----
+[2026-10-13 17:02:55]    1. 0.shallownet.0                                Conv2d  in=1    out=60   kernel=(1, 64) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-13 17:02:55]    2. 0.shallownet.1                                Conv2d  in=60   out=60   kernel=(11, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-13 17:02:55]    3. 0.projection.0                                Conv2d  in=60   out=60   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-13 17:02:55] Total Parameters: 223,685 (trainable: 223,685)
+[2026-10-13 17:02:55] ====================================================
+[2026-10-13 17:03:00] Epoch 1/1 | LR 0.000500
+[2026-10-13 17:03:00] Train Loss: 1.45 | Train Acc: 38.86 | Val Loss: 1.76 | Val Acc: 37.87
+[2026-10-13 17:03:01] === TEST === Acc: 53.02 | B-ACC: 34.86 | W-F1: 42.81 | Kappa: 0.2754 | AUC: 0.7080
+[2026-10-13 17:03:02] Final TEST: Acc=53.02 W-F1=42.81 Kappa=0.2754 AUC=0.7080
