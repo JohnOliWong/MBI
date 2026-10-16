@@ -1,0 +1,31 @@
+[2026-10-15 12:10:44] Logging to Logs/EFBook_ISRUC_train_20261015_121044.log
+[2026-10-15 12:10:44] Train subjects (1): [1]
+[2026-10-15 12:10:44] Val subjects (1): [3]
+[2026-10-15 12:10:44] Test subjects (1): [4]
+[2026-10-15 12:10:51] ==================== EFBook Model Structure ====================
+[2026-10-15 12:10:51] Layer Count: Attention=8, AttentionFusion=3, AvgPool2d=6, BatchNorm2d=10, CLS_Token=2, Classifier=1, Conv2d=14, Cosine_Loss=1, DWSConv=4, Dropout=39, EEGTemporalConvLayer=2, EF_Book=1, EGA=1, Encoder_Common=2, Encoder_EF=1, FFN=8, GELU=8, LayerNorm=16, Linear=52, ModuleList=5, MultiheadAttention=1, NonDynamicallyQuantizableLinear=1, Positional_Embedding=2, Quantization=3, ReLU=9, Self_Encoder=8, Sequential=25, Softmax=3, Transformer_Encoder=2
+[2026-10-15 12:10:51] ---- Convolution Layers (14) ----
+[2026-10-15 12:10:51]    1. ef_conv.temporal_convs.0.eeg_block1.0         Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-15 12:10:51]    2. ef_conv.temporal_convs.0.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(6, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-15 12:10:51]    3. ef_conv.temporal_convs.0.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:10:51]    4. ef_conv.temporal_convs.0.eeg_block3.0         Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-15 12:10:51]    5. ef_conv.temporal_convs.1.eeg_block1.0         Conv2d  in=1    out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-15 12:10:51]    6. ef_conv.temporal_convs.1.eeg_block2.0.depth_conv Conv2d  in=64   out=64   kernel=(3, 1) stride=(1, 1) padding=(0, 0) groups=64
+[2026-10-15 12:10:51]    7. ef_conv.temporal_convs.1.eeg_block2.0.point_conv Conv2d  in=64   out=64   kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:10:51]    8. ef_conv.temporal_convs.1.eeg_block3.0         Conv2d  in=64   out=64   kernel=(1, 15) stride=(1, 1) padding=(0, 7) groups=1
+[2026-10-15 12:10:51]    9. common_convs.0.conv1                          Conv2d  in=1    out=4    kernel=(1, 6000) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:10:51]   10. common_convs.0.conv2.depth_conv               Conv2d  in=4    out=4    kernel=(6, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-15 12:10:51]   11. common_convs.0.conv2.point_conv               Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:10:51]   12. common_convs.1.conv1                          Conv2d  in=1    out=4    kernel=(1, 6000) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:10:51]   13. common_convs.1.conv2.depth_conv               Conv2d  in=4    out=4    kernel=(3, 1) stride=(1, 1) padding=(0, 0) groups=4
+[2026-10-15 12:10:51]   14. common_convs.1.conv2.point_conv               Conv2d  in=4    out=8    kernel=(1, 1) stride=(1, 1) padding=(0, 0) groups=1
+[2026-10-15 12:10:51] ---- Codebooks (3) ----
+[2026-10-15 12:10:51]   quantizers.0                                  size=256   shape=(256, 64)
+[2026-10-15 12:10:51]   quantizers.1                                  size=256   shape=(256, 64)
+[2026-10-15 12:10:51]   fusion_quantizer                              size=256   shape=(256, 64)
+[2026-10-15 12:10:51] Total Parameters: 556,284 (trainable: 556,284)
+[2026-10-15 12:10:51] ====================================================
+[2026-10-15 12:12:10] Epoch 1/1 | LR 0.000500
+[2026-10-15 12:12:10] Train Loss: 6.54 | Train Acc: 27.39 | Val Loss: 4.68 | Val Acc: 27.77
+[2026-10-15 12:12:14] === TEST === Acc: 36.77 | B-ACC: 36.03 | W-F1: 37.55 | Kappa: 0.2268 | AUC: 0.6634
+[2026-10-15 12:12:15] Final TEST: Acc=36.77 W-F1=37.55 Kappa=0.2268 AUC=0.6634
